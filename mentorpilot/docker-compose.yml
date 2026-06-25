@@ -1,0 +1,10 @@
+services:
+  mentor:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      # L'état vit dans le volume monté (persiste entre redémarrages).
+      STATE_PATH: /app/data/state.json
+    volumes:
+      - ./data:/app/data
