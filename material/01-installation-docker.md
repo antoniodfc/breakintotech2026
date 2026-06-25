@@ -7,11 +7,11 @@ qui contient déjà tout ce dont elle a besoin (la bonne version de Python, les
 librairies…). Résultat : **tu n'installes pas Python toi-même**, tu n'as pas à te
 soucier des versions, et « ça marche pareil sur toutes les machines ».
 
-> 🧠 Plus de détails dans le [glossaire → Docker / Image / Conteneur](04-glossaire.md#docker).
+> Plus de détails dans le [glossaire → Docker / Image / Conteneur](04-glossaire.md#docker).
 
 ---
 
-> 👉 **Choisis ta section selon ton système :** [🍎 Mac](#-installation-sur-mac) ·
+> **Choisis ta section selon ton système :** [🍎 Mac](#-installation-sur-mac) ·
 > [🪟 Windows](#-installation-sur-windows) · [🐧 Linux](#-installation-sur-linux).
 > Une fois Docker installé, tout le monde se retrouve à la
 > [section commune « Lancer MentorPilot »](#étape-5--lancer-mentorpilot-avec-docker).
@@ -33,8 +33,15 @@ Clique sur **Download for Mac** et choisis la bonne puce :
 | Mac récent (2020+) — puce **Apple** (M1/M2/M3/M4) | **Apple Silicon** |
 | Mac plus ancien — puce **Intel** | **Intel Chip** |
 
-> 🔎 **Comment savoir ?** Menu  (en haut à gauche) → *À propos de ce Mac* →
+> **Comment savoir ?** Menu (en haut à gauche) → *À propos de ce Mac* →
 > regarde la ligne « Puce » ou « Processeur ».
+
+**En CLI** avec [Homebrew](https://brew.sh), tu peux tout faire en une commande
+(elle télécharge **et** installe Docker Desktop) :
+
+```bash
+brew install --cask docker
+```
 
 ## Étape 2 (Mac) — Installer
 
@@ -48,14 +55,14 @@ Clique sur **Download for Mac** et choisis la bonne puce :
 
 En **haut à droite** de l'écran (la barre de menus), une **petite baleine** apparaît.
 
-- 🐳 **Baleine fixe** → Docker est prêt ✅
+- 🐳 **Baleine fixe** → Docker est prêt
 - 🐳 **Baleine qui s'anime** → Docker démarre encore, patiente 30 s
 
 ![La baleine Docker dans la barre de menus du Mac](img/docker-whale-mac.png)
 
 Ton terminal : **Terminal** (cherche « Terminal » dans Spotlight avec `Cmd + Espace`).
 
-➡️ Passe directement à l'[Étape 4 — Vérifier dans le terminal](#étape-4--vérifier-dans-le-terminal-tous-systèmes).
+Passe directement à l'[Étape 4 — Vérifier dans le terminal](#étape-4--vérifier-dans-le-terminal-tous-systèmes).
 
 ---
 
@@ -73,12 +80,18 @@ Va sur **https://www.docker.com/products/docker-desktop/** et clique sur
 
 ![Page de téléchargement de Docker Desktop pour Windows](img/docker-download-windows.png)
 
+**En CLI** avec **winget** (inclus dans Windows 10/11), dans PowerShell :
+
+```powershell
+winget install --id Docker.DockerDesktop -e --source winget
+```
+
 ## Étape 2 (Windows) — Installer
 
 1. Lance **`Docker Desktop Installer.exe`**
 2. Quand il le propose, **laisse coché** « Use WSL 2 instead of Hyper-V » (recommandé)
 
-<!-- 📸 À insérer plus tard : ![Option WSL 2 cochée pendant l'installation](img/docker-install-win-wsl.png) -->
+<!-- À insérer plus tard : ![Option WSL 2 cochée pendant l'installation](img/docker-install-win-wsl.png) -->
 
 3. Termine l'installation, puis **redémarre ton PC** si on te le demande
 4. Au premier lancement, si Docker affiche un message demandant une mise à jour
@@ -93,26 +106,40 @@ Va sur **https://www.docker.com/products/docker-desktop/** et clique sur
 En **bas à droite** (la zone de notification, près de l'horloge), clique sur la
 flèche `^` pour voir les icônes cachées : une **petite baleine** 🐳 doit y être.
 
-- 🐳 **Baleine fixe** → Docker est prêt ✅
+- 🐳 **Baleine fixe** → Docker est prêt
 - 🐳 **Baleine animée** → patiente que ça démarre
 
-<!-- 📸 À insérer plus tard : ![La baleine Docker dans la zone de notification Windows](img/docker-whale-win.png) -->
+<!-- À insérer plus tard : ![La baleine Docker dans la zone de notification Windows](img/docker-whale-win.png) -->
 
 Ton terminal : ouvre **PowerShell** (menu Démarrer → tape « PowerShell ») ou le
 **Terminal Windows**. Les commandes `docker ...` sont identiques à celles du Mac.
 
-> 💡 Sur Windows, ouvre Docker Desktop **avant** de taper des commandes Docker.
+> Sur Windows, ouvre Docker Desktop **avant** de taper des commandes Docker.
 
-➡️ Passe à l'[Étape 4 — Vérifier dans le terminal](#étape-4--vérifier-dans-le-terminal-tous-systèmes).
+Passe à l'[Étape 4 — Vérifier dans le terminal](#étape-4--vérifier-dans-le-terminal-tous-systèmes).
 
 ---
 
 # 🐧 Installation sur Linux
 
-Suis le guide officiel selon ta distribution :
-**https://docs.docker.com/desktop/install/linux/**
-(ou, en version « moteur seul » sans interface : https://docs.docker.com/engine/install/).
-Ton terminal est celui de ton système. Les commandes `docker compose ...` sont identiques.
+**En CLI**, le plus simple est le script officiel de Docker (Ubuntu, Debian, Fedora…) :
+
+```bash
+# Installe Docker Engine + Docker Compose
+curl -fsSL https://get.docker.com | sh
+
+# (Recommandé) pouvoir lancer docker sans sudo : ajoute ton utilisateur au groupe docker
+sudo usermod -aG docker $USER
+# puis DÉCONNECTE/RECONNECTE ta session pour que ce soit pris en compte
+```
+
+> ⚠️ Sur Linux on installe en général **Docker Engine** (en ligne de commande, sans
+> interface). C'est suffisant pour ce projet : les commandes `docker compose ...` sont
+> identiques à celles du Mac et de Windows.
+
+*(Alternative avec interface graphique — Docker Desktop pour Linux :
+https://docs.docker.com/desktop/install/linux/. Détail du moteur seul :
+https://docs.docker.com/engine/install/.)*
 
 ---
 
@@ -136,11 +163,11 @@ Puis teste que tout fonctionne réellement :
 docker run hello-world
 ```
 
-Si tu vois **« Hello from Docker! »**, tout est bon. 🎉
+Si tu vois **« Hello from Docker! »**, tout est bon.
 
 ![Sortie du terminal montrant « Hello from Docker! »](img/docker-hello-world.png)
 
-> 🧠 `docker run` = « télécharge et lance un conteneur ». Voir le
+> `docker run` = « télécharge et lance un conteneur ». Voir le
 > [glossaire → commandes Docker](04-glossaire.md#commandes-docker-utiles).
 
 ---
@@ -180,7 +207,7 @@ docker compose down
 
 ---
 
-## 🆘 Problèmes fréquents
+## Problèmes fréquents
 
 | Symptôme | Système | Cause | Solution |
 |----------|---------|-------|----------|
@@ -192,7 +219,7 @@ docker compose down
 | `Virtualization is not enabled` | 🪟 Windows | Virtualisation désactivée dans le BIOS | Active « Virtualization / SVM / VT-x » dans le BIOS de ton PC |
 | `Hardware assisted virtualization ... not enabled` | 🪟 Windows | Idem (souvent sur PC fixe) | Même solution : activer la virtualisation dans le BIOS |
 
-> 💡 **À retenir** : après chaque modification du fichier `.env`, il faut
+> **À retenir** : après chaque modification du fichier `.env`, il faut
 > **recréer** le conteneur pour qu'il relise les nouvelles valeurs :
 > ```bash
 > docker compose up -d --force-recreate

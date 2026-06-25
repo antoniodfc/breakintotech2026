@@ -1,4 +1,4 @@
-# 🐙 Guide 3 — GitHub : créer un compte et cloner un repo
+# Guide 3 — GitHub : créer un compte et cloner un repo
 
 ## C'est quoi GitHub ?
 
@@ -9,7 +9,7 @@ sauvegarde en ligne et un historique de toutes les modifications.
 - **Git** = l'outil (sur ton ordinateur) qui suit les versions du code.
 - **GitHub** = le site web qui héberge le code en ligne.
 
-> 🧠 Voir le [glossaire → Git / GitHub / Repo / Cloner](04-glossaire.md#git).
+> Voir le [glossaire → Git / GitHub / Repo / Cloner](04-glossaire.md#git).
 
 ---
 
@@ -26,7 +26,7 @@ sauvegarde en ligne et un historique de toutes les modifications.
 4. Confirme ton email via le lien reçu dans ta boîte mail.
 5. À la question du plan, choisis **Free** (gratuit, amplement suffisant).
 
-✅ Ton compte est prêt.
+Ton compte est prêt.
 
 ---
 
@@ -34,27 +34,67 @@ sauvegarde en ligne et un historique de toutes les modifications.
 
 Pour **cloner** (télécharger) un repo, tu as besoin de l'outil **git**.
 
-### Sur Mac
-
-Le plus simple : ouvre le **Terminal** (`Cmd + Espace`, tape « Terminal ») et lance :
+D'abord, vérifie s'il n'est pas **déjà installé** (souvent le cas) en tapant dans ton
+terminal :
 
 ```bash
 git --version
 ```
 
-- Si une version s'affiche (`git version 2.x.x`) → c'est déjà installé ✅
-- Sinon, macOS te proposera d'installer les **« Command Line Tools »** : accepte.
-  *(Alternative : installe [Homebrew](https://brew.sh) puis `brew install git`.)*
+- Si une version s'affiche (`git version 2.x.x`) → c'est déjà installé, **passe à l'étape 3**.
+- Si tu obtiens une erreur (`command not found` / `n'est pas reconnu`) → installe-le
+  ci-dessous, selon ton système.
+
+### Sur Mac
+
+Le plus simple : tape `git --version` dans le **Terminal** — si Git n'est pas là, macOS
+te proposera automatiquement d'installer les **« Command Line Tools »**, accepte.
+
+Sinon, en CLI avec [Homebrew](https://brew.sh) (le gestionnaire de paquets de macOS) :
+
+```bash
+# 1. Installer Homebrew (à sauter si tu l'as déjà)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# 2. Installer Git
+brew install git
+```
 
 ### Sur Windows
 
-Télécharge **Git for Windows** : https://git-scm.com/download/win
-Installe avec les options par défaut, puis utilise **Git Bash** comme terminal.
+**En CLI** avec **winget** (inclus dans Windows 10/11), dans PowerShell :
 
-### Sur Linux (Debian/Ubuntu)
+```powershell
+winget install --id Git.Git -e --source winget
+```
+
+> ⚠️ **Ferme puis rouvre PowerShell** après l'installation pour que la commande `git`
+> soit reconnue.
+
+*(Alternative graphique : télécharge **Git for Windows** sur https://git-scm.com/download/win,
+installe avec les options par défaut, puis utilise **Git Bash** comme terminal.)*
+
+### Sur Linux
+
+Selon ta distribution :
 
 ```bash
+# Debian / Ubuntu
 sudo apt update && sudo apt install git
+
+# Fedora
+sudo dnf install git
+
+# Arch / Manjaro
+sudo pacman -S git
+```
+
+### Vérifier l'installation
+
+Dans un terminal **neuf**, confirme que Git répond :
+
+```bash
+git --version
 ```
 
 ---
@@ -68,7 +108,7 @@ git config --global user.name "Ton Nom"
 git config --global user.email "ton.email@example.com"
 ```
 
-> 💡 Utilise **la même adresse email** que ton compte GitHub.
+> Utilise **la même adresse email** que ton compte GitHub.
 
 ---
 
@@ -85,7 +125,7 @@ Sur la page GitHub du projet :
 
 ![Bouton vert « Code » ouvert sur l'onglet HTTPS avec l'URL du repo](img/github-code-button.png)
 
-> 🔎 **HTTPS vs SSH ?** HTTPS = simple, juste l'URL. SSH = plus avancé, nécessite
+> **HTTPS vs SSH ?** HTTPS = simple, juste l'URL. SSH = plus avancé, nécessite
 > de configurer une clé. **Commence par HTTPS.** Voir
 > [glossaire → HTTPS / SSH](04-glossaire.md#https-vs-ssh).
 
@@ -110,7 +150,7 @@ Sur la page GitHub du projet :
 
 ![Terminal après un git clone réussi](img/git-clone-terminal.png)
 
-✅ Tu as maintenant tout le code en local. Vérifie avec :
+Tu as maintenant tout le code en local. Vérifie avec :
 
 ```bash
 ls
@@ -140,17 +180,17 @@ git commit -m "Décris ton changement"   # enregistre une version
 git push                        # envoie sur GitHub
 ```
 
-> ⚠️ La toute première fois que tu fais `git push`, GitHub te demandera de
+> La toute première fois que tu fais `git push`, GitHub te demandera de
 > t'authentifier. Le mot de passe classique ne marche plus : utilise un
 > **Personal Access Token** (jeton). Voir
 > [glossaire → Personal Access Token](04-glossaire.md#personal-access-token-pat).
 
-> 🔒 **Ne pousse jamais ton fichier `.env`** (il contient tes secrets). Il est déjà
+> ⚠️ **Ne pousse jamais ton fichier `.env`** (il contient tes secrets). Il est déjà
 > ignoré par le `.gitignore` du projet, donc tu es protégé.
 
 ---
 
-## 🆘 Problèmes fréquents
+## Problèmes fréquents
 
 | Symptôme | Cause | Solution |
 |----------|-------|----------|

@@ -1,4 +1,4 @@
-# 💬 Guide 2 — Installer Telegram et configurer ton bot
+# Guide 2 — Installer Telegram et configurer ton bot
 
 MentorPilot te parle **via Telegram** : c'est ton interface. Tu vas créer un **bot**
 (un compte automatisé piloté par le code) et récupérer **3 informations** à coller
@@ -12,7 +12,7 @@ dans le fichier `.env`.
 | `TELEGRAM_CHAT_ID` | Ton identifiant perso (pour que le bot t'écrive) | `7042123456` |
 | `DEEPSEEK_API_KEY` | La clé de l'IA qui rédige les leçons | `sk-...` |
 
-> 🧠 Un *token*, une *clé API* ? Voir le [glossaire](04-glossaire.md#token--cle-api).
+> Un *token*, une *clé API* ? Voir le [glossaire](04-glossaire.md#token--cle-api).
 
 ---
 
@@ -30,7 +30,7 @@ dans le fichier `.env`.
 **@BotFather** est le bot officiel de Telegram qui sert à créer d'autres bots.
 
 1. Dans la barre de recherche Telegram, tape **`BotFather`** et ouvre celui avec la
-   **coche bleue** ✅ (compte vérifié).
+   **coche bleue** (compte vérifié).
 2. Clique sur **Démarrer** (ou envoie `/start`).
 3. Envoie la commande :
    ```
@@ -39,7 +39,7 @@ dans le fichier `.env`.
 4. Il te demande un **nom** (affiché) — ex : `Mon Mentor IA`
 5. Puis un **username** qui doit **finir par `bot`** — ex : `mon_mentor_2026_bot`
    *(s'il est déjà pris, essaie une variante)*
-6. 🎉 BotFather te répond avec un message contenant ton **token** :
+6. BotFather te répond avec un message contenant ton **token** :
    ```
    Use this token to access the HTTP API:
    8123456789:AAHxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -47,9 +47,9 @@ dans le fichier `.env`.
 
 ![Conversation BotFather après /newbot montrant le token du bot](img/botfather-newbot.png)
 
-➡️ **Copie ce token** : c'est ton **`TELEGRAM_BOT_TOKEN`**.
+**Copie ce token** : c'est ton **`TELEGRAM_BOT_TOKEN`**.
 
-> 🔒 **Ne partage JAMAIS ce token** publiquement. Quiconque l'a peut contrôler ton bot.
+> ⚠️ **Ne partage JAMAIS ce token** publiquement. Quiconque l'a peut contrôler ton bot.
 > Si tu le divulgues par erreur, renvoie `/revoke` à BotFather pour en générer un nouveau.
 
 ---
@@ -69,9 +69,9 @@ Le bot a besoin de savoir **à qui** envoyer les messages : c'est ton *chat ID*.
 
 ![Réponse de userinfobot affichant l'Id du compte](img/userinfobot-id.png)
 
-➡️ Le nombre après `Id:` est ton **`TELEGRAM_CHAT_ID`**.
+Le nombre après `Id:` est ton **`TELEGRAM_CHAT_ID`**.
 
-> ℹ️ **Bon à savoir** : un ID de personne est un nombre **positif**.
+> **Bon à savoir** : un ID de personne est un nombre **positif**.
 > Pour un **groupe** il serait **négatif** (ex : `-1001234...`). Ici on utilise ton
 > chat perso, donc un nombre positif.
 
@@ -87,7 +87,7 @@ ne lui a pas parlé au moins une fois.
 
 ![Bouton « Démarrer » sous la conversation du bot](img/bot-start-button.png)
 
-C'est tout — maintenant le bot a le droit de t'écrire. ✅
+C'est tout — maintenant le bot a le droit de t'écrire.
 
 ---
 
@@ -102,7 +102,7 @@ C'est l'IA qui **rédige les roadmaps et les leçons**.
 
 ![Page API Keys de DeepSeek avec le bouton de création de clé](img/deepseek-apikey.png)
 
-➡️ C'est ta **`DEEPSEEK_API_KEY`**.
+C'est ta **`DEEPSEEK_API_KEY`**.
 
 ---
 
@@ -139,7 +139,7 @@ LESSON_HOUR=9
 - `LESSON_HOUR` = l'heure (0–23, heure locale) où le bot t'envoie la leçon du jour.
   `9` = 9 h du matin.
 
-> 🔒 **Le fichier `.env` ne doit jamais être partagé ni envoyé sur GitHub.**
+> ⚠️ **Le fichier `.env` ne doit jamais être partagé ni envoyé sur GitHub.**
 > Bonne nouvelle : il est déjà protégé par le `.gitignore` du projet (voir
 > [glossaire → .gitignore](04-glossaire.md#gitignore)).
 
@@ -159,9 +159,9 @@ Telegram bot started
 MentorPilot démarré. En attente d'événements...
 ```
 
-…et recevoir **« 🤖 MentorPilot est en ligne ! »** dans ta conversation Telegram. 🎉
+…et recevoir **« 🤖 MentorPilot est en ligne ! »** dans ta conversation Telegram.
 
-<!-- 📸 À insérer plus tard : ![Message « MentorPilot est en ligne ! » reçu sur Telegram](img/mentorpilot-online.png) -->
+<!-- À insérer plus tard : ![Message « MentorPilot est en ligne ! » reçu sur Telegram](img/mentorpilot-online.png) -->
 
 Envoie alors **`/start`** à ton bot pour définir ton objectif et générer ta roadmap.
 
@@ -169,7 +169,7 @@ Envoie alors **`/start`** à ton bot pour définir ton objectif et générer ta 
 
 ---
 
-## 🆘 Problèmes fréquents
+## Problèmes fréquents
 
 | Symptôme | Cause | Solution |
 |----------|-------|----------|

@@ -1,4 +1,4 @@
-# 📖 Glossaire débutant — MentorPilot
+# Glossaire débutant — MentorPilot
 
 Tous les mots et concepts du projet, expliqués simplement. Classés par thème.
 Utilise `Cmd + F` pour chercher un mot.
@@ -59,7 +59,7 @@ partagé sur GitHub pour montrer quelles variables remplir. On le copie :
 Une **longue chaîne secrète** qui sert de mot de passe pour utiliser un service.
 - `TELEGRAM_BOT_TOKEN` → prouve que c'est bien ton bot.
 - `DEEPSEEK_API_KEY` → prouve que tu as le droit d'utiliser l'IA.
-🔒 À garder secret. Si fuité, on le **révoque** (annule) et on en génère un nouveau.
+À garder secret. Si fuité, on le **révoque** (annule) et on en génère un nouveau.
 
 ### JSON
 Un format texte pour **stocker des données structurées**, lisible par l'humain et la
@@ -119,7 +119,7 @@ branches pour développer une nouveauté sans casser `main`.
 Un fichier qui liste ce que Git doit **ignorer** (ne jamais enregistrer). On y met les
 secrets et les fichiers générés. Dans ce projet il ignore notamment :
 `.env` (secrets), `state.json` (données), `__pycache__/` et `.venv/` (fichiers Python).
-👉 C'est ce qui empêche tes clés de partir sur GitHub.
+C'est ce qui empêche tes clés de partir sur GitHub.
 
 ### <a id="https-vs-ssh"></a>HTTPS vs SSH
 Deux façons de se connecter à GitHub pour cloner/pousser :
@@ -238,7 +238,7 @@ Une **porte d'entrée** qui permet à un programme d'en utiliser un autre à dis
 MentorPilot envoie ta demande à l'**API de DeepSeek** et reçoit le texte généré en retour.
 
 ### Token (au sens IA)
-⚠️ Mot à double sens ! Côté IA, un *token* est un **morceau de mot** (≈ ¾ d'un mot).
+Mot à double sens ! Côté IA, un *token* est un **morceau de mot** (≈ ¾ d'un mot).
 Les modèles facturent au nombre de tokens. Rien à voir avec le *token secret* de Telegram.
 
 ### Prompt
@@ -304,7 +304,7 @@ apprenant. (Stocké dans un **volume** Docker pour survivre aux redémarrages.)
 
 ### Human-in-the-loop (« humain dans la boucle »)
 Le principe où **tu valides** les décisions clés : l'IA propose une roadmap, mais **rien
-n'avance sans ton ✅**. Tu gardes le contrôle.
+n'avance sans ton **. Tu gardes le contrôle.
 
 ### Callback
 Une fonction qu'on **branche** pour être appelée quand un événement se produit (ex :
@@ -318,9 +318,9 @@ Une façon de programmer où le programme peut **gérer plusieurs choses sans se
 
 ---
 
-## 🔗 Pour aller plus loin
+## Pour aller plus loin
 
 - Le [README du projet](../mentorpilot/README.md) — vue d'ensemble et schéma d'architecture
 - [Guide Docker](01-installation-docker.md) · [Guide Telegram](02-installation-telegram.md) · [Guide GitHub](03-github-compte-et-clone.md)
 
-> 💬 Un terme manque ? Ajoute-le ici, c'est un document vivant !
+> Un terme manque ? Ajoute-le ici, c'est un document vivant !

@@ -1,4 +1,4 @@
-# 📚 Material — Documentation débutant pour MentorPilot
+# Material — Documentation débutant pour MentorPilot
 
 Bienvenue ! Ce dossier rassemble tout ce qu'il faut pour **installer, comprendre et lancer**
 le projet [MentorPilot](../mentorpilot/) quand on débute en tech.
@@ -8,7 +8,7 @@ Lis les guides **dans l'ordre** la première fois. Chaque guide est autonome et 
 
 ---
 
-## 🗺️ Parcours conseillé
+## Parcours conseillé
 
 | # | Guide | Ce que tu apprends | Durée |
 |---|-------|--------------------|-------|
@@ -19,7 +19,7 @@ Lis les guides **dans l'ordre** la première fois. Chaque guide est autonome et 
 
 ---
 
-## 🎯 Dans quel ordre faire les choses ?
+## Dans quel ordre faire les choses ?
 
 ```
 1. Créer un compte GitHub  ─┐
@@ -35,12 +35,12 @@ Lis les guides **dans l'ordre** la première fois. Chaque guide est autonome et 
                                  /start sur Telegram 🎉
 ```
 
-> 💡 **Bloqué sur un mot ?** Ouvre le [glossaire](04-glossaire.md) : tout y est expliqué
+> **Bloqué sur un mot ?** Ouvre le [glossaire](04-glossaire.md) : tout y est expliqué
 > avec des images simples (un terminal, un dépôt, un conteneur…).
 
 ---
 
-## ✅ Checklist avant de lancer le projet
+## Checklist avant de lancer le projet
 
 - [ ] J'ai un compte **GitHub** et j'ai **cloné** le repo
 - [ ] **Docker Desktop** est installé et la baleine 🐳 est allumée
