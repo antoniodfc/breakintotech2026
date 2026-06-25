@@ -16,23 +16,23 @@ C'est le pendant « apprentissage » d'[InboxPilot](../inbox-pilot-ai-agents) : 
               │
               ▼
      ┌─────────────────┐
-     │  Planner         │  DeepSeek — génère la roadmap (6-10 étapes)
+     │  Planner        │  DeepSeek — génère la roadmap (6-10 étapes)
      └────────┬────────┘
-              │  ✅ valider / ✏️ ajuster   (human-in-the-loop)
+              │   valider /  ajuster   (human-in-the-loop)
               ▼
      ┌─────────────────┐
-     │  Scheduler       │  déclenche la leçon chaque jour à LESSON_HOUR
+     │  Scheduler      │  déclenche la leçon chaque jour à LESSON_HOUR
      └────────┬────────┘
               ▼
      ┌─────────────────┐     ┌──────────────────┐
-     │  Tutor           │◄───►│  Ton téléphone    │
-     │  DeepSeek        │     │  (Telegram)       │
-     │  leçon + Q/R     │     └──────────────────┘
+     │  Tutor          │◄───►│  Ton téléphone   │
+     │  DeepSeek       │     │  (Telegram)      │
+     │  leçon + Q/R    │     └──────────────────┘
      └────────┬────────┘
-              │  ✅ Terminé
+              │   Terminé
               ▼
      ┌─────────────────┐
-     │  Progression     │  state.json — étape suivante, série, %
+     │  Progression    │  state.json — étape suivante, série, %
      └─────────────────┘
 ```
 
