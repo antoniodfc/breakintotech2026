@@ -1,11 +1,15 @@
-# MentorPilot — Mentor IA pour débutants en tech
+# BitMentor — Mentor IA pour débutants en tech
 
 > Une flotte d'agents Python qui accompagne un débutant vers son objectif tech :
 > **objectif → roadmap personnalisée → leçon quotidienne → questions → progression**
 
-Tu donnes ton objectif (ex : *« devenir développeur web »*) et ton niveau → l'agent **Planner** génère une roadmap avec DeepSeek → tu la valides → chaque jour le **Scheduler** te pousse une leçon rédigée par le **Tutor** sur **Telegram**. Tu poses tes questions, tu valides tes étapes, et MentorPilot suit ta progression.
+Tu donnes ton objectif (ex : *« devenir développeur web »*) et ton niveau → l'agent **Planner** génère une roadmap avec DeepSeek → tu la valides → chaque jour le **Scheduler** te pousse une leçon rédigée par le **Tutor** sur **Telegram**. Tu poses tes questions, tu valides tes étapes, et BitMentor suit ta progression.
 
-C'est le pendant « apprentissage » d'[InboxPilot](../inbox-pilot-ai-agents) : même architecture (flotte d'agents + human-in-the-loop + Telegram + Docker), un autre domaine.
+Architecture : une flotte d'agents + human-in-the-loop + Telegram + Docker.
+
+> 🧑‍🎓 **Grand débutant ?** Ce README est la **doc technique** du projet. Pour
+> l'installer pas à pas (terminal, Docker, Telegram, GitHub), suis d'abord les
+> guides illustrés du dossier [`../material/`](../material/README.md).
 
 ---
 
@@ -76,7 +80,7 @@ L'état (roadmap + progression) est persisté dans `state.json` — pas de base 
 ## Étape 3 — Configuration
 
 ```bash
-cd mentorpilot
+cd bitmentor
 cp .env.example .env
 # édite .env : DEEPSEEK_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, LESSON_HOUR
 ```
@@ -88,8 +92,9 @@ cp .env.example .env
 ### En local (Python)
 
 ```bash
-cd mentorpilot
-python -m venv .venv && source .venv/bin/activate
+cd bitmentor
+python -m venv .venv
+source .venv/bin/activate        # Windows : .venv\Scripts\activate
 pip install -r requirements.txt
 python orchestrator.py
 ```
@@ -97,13 +102,13 @@ python orchestrator.py
 ### En Docker (24/7)
 
 ```bash
-cd mentorpilot
+cd bitmentor
 docker compose up -d --build
-docker compose logs -f mentor
+docker compose logs -f bitmentor
 ```
 
-Tu dois voir `Telegram bot started` puis `MentorPilot démarré`, et recevoir
-**« 🤖 MentorPilot est en ligne ! »** sur Telegram.
+Tu dois voir `Telegram bot started` puis `BitMentor démarré`, et recevoir
+**« 🤖 BitMentor est en ligne ! »** sur Telegram.
 
 ---
 
@@ -143,7 +148,7 @@ Tu peux aussi écrire n'importe quelle question à tout moment : si une roadmap 
 ## Structure du projet
 
 ```
-mentorpilot/
+bitmentor/
 ├── orchestrator.py        # point d'entrée — câble les agents, possède l'état
 ├── config.py              # configuration (variables d'env)
 ├── models.py              # LearningPlan, Milestone, Progress, AppState

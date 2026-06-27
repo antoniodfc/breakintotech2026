@@ -126,7 +126,7 @@ class Orchestrator:
         self._wire()
         await self.bot.start()
         await self.scheduler.start()
-        logger.info("MentorPilot démarré. En attente d'événements...")
+        logger.info("BitMentor démarré. En attente d'événements...")
 
         stop = asyncio.Event()
         loop = asyncio.get_running_loop()

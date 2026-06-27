@@ -1,6 +1,6 @@
 # Guide 2 — Installer Telegram et configurer ton bot
 
-MentorPilot te parle **via Telegram** : c'est ton interface. Tu vas créer un **bot**
+BitMentor te parle **via Telegram** : c'est ton interface. Tu vas créer un **bot**
 (un compte automatisé piloté par le code) et récupérer **3 informations** à coller
 dans le fichier `.env`.
 
@@ -108,14 +108,14 @@ C'est ta **`DEEPSEEK_API_KEY`**.
 
 ## Étape 6 — Remplir le fichier `.env`
 
-Dans le dossier `mentorpilot/`, crée ton fichier de configuration à partir du modèle.
+Dans le dossier `bitmentor/`, crée ton fichier de configuration à partir du modèle.
 
 > 📟 Ces commandes se tapent dans le **terminal**. Besoin d'un rappel sur comment
 > l'ouvrir selon ton système ? Voir le
 > [glossaire → Terminal](04-glossaire.md#terminal-ou-ligne-de-commande).
 
 ```bash
-cd mentorpilot
+cd bitmentor
 cp .env.example .env
 ```
 
@@ -136,12 +136,15 @@ DEEPSEEK_API_KEY=sk-ta_vraie_cle_deepseek
 TELEGRAM_BOT_TOKEN=8123456789:AAH...ton_vrai_token
 TELEGRAM_CHAT_ID=7042123456
 LESSON_HOUR=9
+TZ=Europe/Paris
 ```
 
 ![Fichier .env rempli ouvert dans VS Code](img/env-rempli.png)
 
-- `LESSON_HOUR` = l'heure (0–23, heure locale) où le bot t'envoie la leçon du jour.
-  `9` = 9 h du matin.
+- `LESSON_HOUR` = l'heure (0–23) où le bot t'envoie la leçon du jour. `9` = 9 h.
+- `TZ` = ton **fuseau horaire**. ⚠️ **Important en Docker** : sans lui, le conteneur
+  tourne en **UTC** et ta leçon arriverait à la mauvaise heure (décalée de 1–2 h).
+  Mets ton fuseau, ex. `Europe/Paris`.
 
 > ⚠️ **Le fichier `.env` ne doit jamais être partagé ni envoyé sur GitHub.**
 > Bonne nouvelle : il est déjà protégé par le `.gitignore` du projet (voir
@@ -149,23 +152,29 @@ LESSON_HOUR=9
 
 ---
 
-## Étape 7 — Lancer et vérifier
+## Étape 7 — Lancer BitMentor 🚀 (le grand moment)
+
+C'est **le premier lancement du projet**. Tout est prêt : le code est cloné
+([guide GitHub](01-github-compte-et-clone.md)), Docker est installé
+([guide Docker](02-installation-docker.md)) et ton `.env` est rempli (étape 6).
+
+Depuis le dossier `bitmentor/` :
 
 ```bash
 docker compose up -d --build
-docker compose logs -f mentor
+docker compose logs -f bitmentor
 ```
 
 Tu dois voir dans les logs :
 
 ```
 Telegram bot started
-MentorPilot démarré. En attente d'événements...
+BitMentor démarré. En attente d'événements...
 ```
 
-…et recevoir **« 🤖 MentorPilot est en ligne ! »** dans ta conversation Telegram.
+…et recevoir **« 🤖 BitMentor est en ligne ! »** dans ta conversation Telegram.
 
-<!-- À insérer plus tard : ![Message « MentorPilot est en ligne ! » reçu sur Telegram](img/mentorpilot-online.png) -->
+<!-- À insérer plus tard : ![Message « BitMentor est en ligne ! » reçu sur Telegram](img/bitmentor-online.png) -->
 
 Envoie alors **`/start`** à ton bot pour définir ton objectif et générer ta roadmap.
 
@@ -180,6 +189,7 @@ Envoie alors **`/start`** à ton bot pour définir ton objectif et générer ta 
 | `InvalidToken ... was rejected` | Token faux ou resté en placeholder | Recopie le vrai token, puis `docker compose up -d --force-recreate` |
 | Le bot démarre mais ne t'écrit pas | Tu n'as pas « démarré » ton bot | Ouvre ton bot, clique **Démarrer** (étape 4) |
 | `TELEGRAM_CHAT_ID manquant ou invalide` | ID vide ou non numérique | Remets le nombre donné par @userinfobot |
-| Les leçons n'arrivent pas à l'heure | Mauvais `LESSON_HOUR` ou fuseau | Mets l'heure locale (0–23) et recrée le conteneur |
+| Les leçons arrivent décalées de 1–2 h | `TZ` absent → conteneur en UTC | Ajoute `TZ=Europe/Paris` dans `.env`, puis `docker compose up -d --force-recreate` |
+| Pas de leçon du tout à l'heure prévue | `LESSON_HOUR` invalide | Mets un entier 0–23 et recrée le conteneur |
 
-➡️ **Suite : [GitHub : compte + cloner un repo](03-github-compte-et-clone.md)**
+➡️ **Suite : [Glossaire débutant](04-glossaire.md)** — pour comprendre tous les mots du projet.

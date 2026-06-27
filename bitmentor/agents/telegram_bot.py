@@ -84,7 +84,7 @@ class TelegramBot:
         logger.info("Telegram bot started")
 
         await self._send(
-            "🤖 *MentorPilot est en ligne !*\n\n"
+            "🤖 *BitMentor est en ligne !*\n\n"
             "Je suis ton mentor tech personnel.\n"
             "Tape /start pour définir ton objectif et générer ta roadmap."
         )

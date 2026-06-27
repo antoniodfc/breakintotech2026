@@ -3,10 +3,11 @@
 ## Pourquoi ce guide ? (le but)
 
 L'objectif de cette étape est de **préparer ta machine** pour faire tourner
-l'application MentorPilot — **sans** avoir à installer Python, des librairies ou à
-te battre avec des versions. Tu installes **un seul outil, Docker**, et à la fin
-(étape 5) tu pourras **lancer tout le projet en une commande**. C'est la fondation :
-les guides suivants (Telegram, GitHub) s'appuient dessus.
+l'application BitMentor — **sans** avoir à installer Python, des librairies ou à
+te battre avec des versions. Tu installes **un seul outil, Docker**. Le code du
+projet a déjà été récupéré au [guide GitHub](01-github-compte-et-clone.md) ; une
+fois Docker en place, il ne restera plus qu'à créer tes clés et lancer le projet,
+au [guide Telegram](03-installation-telegram.md).
 
 ## C'est quoi Docker, en une phrase ?
 
@@ -52,8 +53,8 @@ appuies sur **Entrée**. C'est l'outil standard pour piloter Docker, Git, etc.
 
 > **Choisis ta section selon ton système :** [🍎 Mac](#-installation-sur-mac) ·
 > [🪟 Windows](#-installation-sur-windows) · [🐧 Linux](#-installation-sur-linux).
-> Une fois Docker installé, tout le monde se retrouve à la
-> [section commune « Lancer MentorPilot »](#étape-5--lancer-mentorpilot-avec-docker).
+> Une fois Docker installé, tout le monde se retrouve à l'[étape 4 commune de
+> vérification](#étape-4--vérifier-dans-le-terminal-tous-systèmes).
 
 ---
 
@@ -216,27 +217,24 @@ Si tu vois **« Hello from Docker! »**, tout est bon.
 
 ---
 
-## Étape 5 — Lancer MentorPilot avec Docker
+## Étape 5 — (Référence) Lancer / arrêter le projet
 
-**But de l'étape :** c'est ici que Docker sert vraiment. La commande ci-dessous
-**construit l'application** (à partir du `Dockerfile`) puis **la démarre** dans un
-conteneur, en arrière-plan. À partir de là, ton mentor IA tourne sur ta machine.
+⚠️ **Tu n'as pas besoin de lancer le projet maintenant** : il te manque encore tes
+clés Telegram et DeepSeek. Le **premier lancement se fera à la fin du
+[guide Telegram](03-installation-telegram.md)**, une fois ton `.env` rempli.
 
-> ℹ️ Cette étape suppose les deux autres guides déjà faits : le repo **cloné**
-> (voir [guide GitHub](03-github-compte-et-clone.md)) et le fichier `.env` **rempli**
-> avec tes clés (voir [guide Telegram](02-installation-telegram.md)). Sans eux, l'app
-> démarrera mais ne pourra pas se connecter.
-
-Une fois ces prérequis en place :
+Garde ces commandes sous la main — tu les utiliseras à ce moment-là (et au quotidien),
+toujours **depuis le dossier `bitmentor/`** (récupéré au
+[guide GitHub](01-github-compte-et-clone.md)) :
 
 ```bash
-cd mentorpilot
+cd bitmentor
 docker compose up -d --build
 ```
 
-- `cd mentorpilot` → entre dans le dossier du projet
+- `cd bitmentor` → entre dans le dossier du projet
   *(Windows : si tu as cloné dans `Documents`, le chemin complet ressemble à
-  `cd C:\Users\TonNom\Documents\breakintotech2026\mentorpilot`)*
+  `cd C:\Users\TonNom\Documents\breakintotech2026\bitmentor`)*
 - `docker compose up` → construit et démarre l'app
 - `-d` → en arrière-plan (« detached »), tu récupères ton terminal
 - `--build` → (re)construit l'image à partir du `Dockerfile`
@@ -244,12 +242,12 @@ docker compose up -d --build
 Pour **voir les logs** (ce que fait l'app en direct) :
 
 ```bash
-docker compose logs -f mentor
+docker compose logs -f bitmentor
 ```
 
 *(`Ctrl + C` pour arrêter de regarder les logs — ça n'arrête PAS l'app.)*
 
-![Logs montrant « MentorPilot démarré » et le bot connecté](img/docker-logs-success.png)
+![Logs montrant « BitMentor démarré » et le bot connecté](img/docker-logs-success.png)
 
 Pour **arrêter** l'app :
 
@@ -277,4 +275,4 @@ docker compose down
 > docker compose up -d --force-recreate
 > ```
 
-➡️ **Suite : [Installer & configurer Telegram](02-installation-telegram.md)**
+➡️ **Suite : [Installer & configurer Telegram](03-installation-telegram.md)**

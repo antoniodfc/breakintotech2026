@@ -1,4 +1,4 @@
-# Glossaire débutant — MentorPilot
+# Glossaire débutant — BitMentor
 
 Tous les mots et concepts du projet, expliqués simplement. Classés par thème.
 Utilise `Cmd + F` pour chercher un mot.
@@ -8,7 +8,7 @@ Utilise `Cmd + F` pour chercher un mot.
 - [3. Docker](#3-docker)
 - [4. Telegram & bots](#4-telegram--bots)
 - [5. IA & API (DeepSeek)](#5-ia--api-deepseek)
-- [6. Les concepts propres à MentorPilot](#6-les-concepts-propres-à-mentorpilot)
+- [6. Les concepts propres à BitMentor](#6-les-concepts-propres-à-bitmentor)
 
 ---
 
@@ -40,16 +40,16 @@ option `-d`.
 - `ls` → **liste** ce qu'il y a dans le dossier courant.
 
 ### Chemin (path)
-L'adresse d'un fichier ou dossier. Ex : `mentorpilot/agents/planner.py`.
+L'adresse d'un fichier ou dossier. Ex : `bitmentor/agents/planner.py`.
 `~` = ton dossier personnel (ex : `/Users/peco3k`).
 
 ### Python
-Le **langage de programmation** dans lequel MentorPilot est écrit. Les fichiers
+Le **langage de programmation** dans lequel BitMentor est écrit. Les fichiers
 finissent par `.py`. Tu n'as **pas besoin de l'installer** ici : Docker s'en charge.
 
 ### Librairie / dépendance
 Du code déjà écrit par d'autres, que le projet réutilise. Elles sont listées dans
-[`requirements.txt`](../mentorpilot/requirements.txt) (ex : `python-telegram-bot`).
+[`requirements.txt`](../bitmentor/requirements.txt) (ex : `python-telegram-bot`).
 « Installer les dépendances » = télécharger ces briques.
 
 ### Variable d'environnement
@@ -73,14 +73,14 @@ Une **longue chaîne secrète** qui sert de mot de passe pour utiliser un servic
 
 ### JSON
 Un format texte pour **stocker des données structurées**, lisible par l'humain et la
-machine. MentorPilot enregistre ta progression dans un fichier `state.json`. Exemple :
+machine. BitMentor enregistre ta progression dans un fichier `state.json`. Exemple :
 ```json
 { "goal": "devenir développeur web", "level": "débutant" }
 ```
 
 ### Log (journal)
 Les **messages** qu'affiche un programme pendant qu'il tourne, pour dire ce qu'il fait
-(ou quelle erreur survient). On les lit avec `docker compose logs -f mentor`.
+(ou quelle erreur survient). On les lit avec `docker compose logs -f bitmentor`.
 
 ### Bug / Erreur / Traceback
 - **Bug** : un comportement non voulu.
@@ -157,12 +157,12 @@ construit à partir du **Dockerfile**. Elle ne tourne pas toute seule.
 
 ### Conteneur (container)
 Une **instance qui tourne**, créée à partir d'une image (le gâteau qu'on sort du paquet
-et qu'on mange). C'est dans le conteneur que MentorPilot s'exécute réellement.
+et qu'on mange). C'est dans le conteneur que BitMentor s'exécute réellement.
 
 ### Dockerfile
 La **recette** pour construire l'image : « pars de Python 3.12, installe les
 dépendances, copie le code, lance `orchestrator.py` ». Voir
-[`mentorpilot/Dockerfile`](../mentorpilot/Dockerfile).
+[`bitmentor/Dockerfile`](../bitmentor/Dockerfile).
 
 ### docker-compose / `docker-compose.yml`
 Un outil pour **décrire et lancer** un (ou plusieurs) conteneur(s) avec une seule
@@ -178,7 +178,7 @@ même si le conteneur est supprimé. Ici, le dossier `data/` garde ton `state.js
 | Commande | Ce qu'elle fait |
 |----------|-----------------|
 | `docker compose up -d --build` | Construit l'image et lance l'app en arrière-plan |
-| `docker compose logs -f mentor` | Affiche les logs en direct |
+| `docker compose logs -f bitmentor` | Affiche les logs en direct |
 | `docker compose down` | Arrête et supprime le conteneur |
 | `docker compose up -d --force-recreate` | Recrée le conteneur (utile après avoir modifié `.env`) |
 | `docker ps` | Liste les conteneurs en cours d'exécution |
@@ -198,7 +198,7 @@ utilisateurs Mac et Linux n'ont pas à s'en soucier.
 ## 4. Telegram & bots
 
 ### Bot
-Un **compte automatisé** sur Telegram, piloté par du code. MentorPilot **est** un bot :
+Un **compte automatisé** sur Telegram, piloté par du code. BitMentor **est** un bot :
 tu lui parles, il te répond.
 
 ### @BotFather
@@ -214,7 +214,7 @@ Ton **identifiant numérique** de conversation. Le bot en a besoin pour savoir *
 envoyer les leçons. Positif pour une personne, négatif pour un groupe.
 
 ### Commande Telegram (slash command)
-Un message qui commence par `/`, interprété comme une **action**. Dans MentorPilot :
+Un message qui commence par `/`, interprété comme une **action**. Dans BitMentor :
 | Commande | Effet |
 |----------|-------|
 | `/start` | Définir ton objectif et générer la roadmap |
@@ -228,7 +228,7 @@ Un message qui commence par `/`, interprété comme une **action**. Dans MentorP
 ### Webhook vs Polling
 Deux façons pour un bot de **recevoir** les messages.
 - **Polling** : le bot **demande régulièrement** « du nouveau ? » (`getUpdates`). C'est
-  ce qu'utilise MentorPilot — voir la ligne `getUpdates` dans les logs.
+  ce qu'utilise BitMentor — voir la ligne `getUpdates` dans les logs.
 - **Webhook** : Telegram **prévient** le bot dès qu'un message arrive (plus avancé).
 
 ---
@@ -245,7 +245,7 @@ Le **fournisseur d'IA** utilisé par le projet. On l'appelle via une **API** ave
 
 ### API (Application Programming Interface)
 Une **porte d'entrée** qui permet à un programme d'en utiliser un autre à distance.
-MentorPilot envoie ta demande à l'**API de DeepSeek** et reçoit le texte généré en retour.
+BitMentor envoie ta demande à l'**API de DeepSeek** et reçoit le texte généré en retour.
 
 ### Token (au sens IA)
 Mot à double sens ! Côté IA, un *token* est un **morceau de mot** (≈ ¾ d'un mot).
@@ -254,28 +254,28 @@ Les modèles facturent au nombre de tokens. Rien à voir avec le *token secret* 
 ### Prompt
 Le **texte d'instruction** envoyé à l'IA pour orienter sa réponse (ton, format, rôle).
 Dans le projet, les prompts vivent dans
-[`agents/planner.py`](../mentorpilot/agents/planner.py) et
-[`agents/tutor.py`](../mentorpilot/agents/tutor.py).
+[`agents/planner.py`](../bitmentor/agents/planner.py) et
+[`agents/tutor.py`](../bitmentor/agents/tutor.py).
 
 ---
 
-## 6. Les concepts propres à MentorPilot
+## 6. Les concepts propres à BitMentor
 
 ### Agent
-Un **module spécialisé** qui s'occupe d'**une** responsabilité. MentorPilot est une
+Un **module spécialisé** qui s'occupe d'**une** responsabilité. BitMentor est une
 **flotte de 4 agents** qui collaborent (voir tableau ci-dessous). C'est une façon
 d'organiser le code proprement.
 
 | Agent | Fichier | Rôle |
 |-------|---------|------|
-| **Planner** | [`agents/planner.py`](../mentorpilot/agents/planner.py) | Objectif + niveau → génère la roadmap (IA) |
-| **Scheduler** | [`agents/scheduler.py`](../mentorpilot/agents/scheduler.py) | Déclenche la leçon chaque jour à heure fixe |
-| **Tutor** | [`agents/tutor.py`](../mentorpilot/agents/tutor.py) | Rédige la leçon et répond aux questions (IA) |
-| **Telegram bot** | [`agents/telegram_bot.py`](../mentorpilot/agents/telegram_bot.py) | L'interface avec toi (commandes, boutons) |
+| **Planner** | [`agents/planner.py`](../bitmentor/agents/planner.py) | Objectif + niveau → génère la roadmap (IA) |
+| **Scheduler** | [`agents/scheduler.py`](../bitmentor/agents/scheduler.py) | Déclenche la leçon chaque jour à heure fixe |
+| **Tutor** | [`agents/tutor.py`](../bitmentor/agents/tutor.py) | Rédige la leçon et répond aux questions (IA) |
+| **Telegram bot** | [`agents/telegram_bot.py`](../bitmentor/agents/telegram_bot.py) | L'interface avec toi (commandes, boutons) |
 
 ### Orchestrateur (Orchestrator)
 Le **chef d'orchestre** : le point d'entrée
-([`orchestrator.py`](../mentorpilot/orchestrator.py)) qui **démarre et relie** tous les
+([`orchestrator.py`](../bitmentor/orchestrator.py)) qui **démarre et relie** tous les
 agents, détient l'état, et fait circuler l'information entre eux.
 
 ### Planner
@@ -293,7 +293,7 @@ L'agent « réveil » : à l'heure définie par `LESSON_HOUR`, il déclenche l'e
 ### Roadmap / LearningPlan
 Ton **plan d'apprentissage personnalisé** : objectif + niveau + une liste d'**étapes**
 (milestones). Représenté par la classe `LearningPlan` dans
-[`models.py`](../mentorpilot/models.py).
+[`models.py`](../bitmentor/models.py).
 
 ### Milestone (étape / jalon)
 **Une étape** de la roadmap : un titre, un concept à apprendre, une durée estimée, et un
@@ -330,7 +330,7 @@ Une façon de programmer où le programme peut **gérer plusieurs choses sans se
 
 ## Pour aller plus loin
 
-- Le [README du projet](../mentorpilot/README.md) — vue d'ensemble et schéma d'architecture
-- [Guide Docker](01-installation-docker.md) · [Guide Telegram](02-installation-telegram.md) · [Guide GitHub](03-github-compte-et-clone.md)
+- Le [README du projet](../bitmentor/README.md) — vue d'ensemble et schéma d'architecture
+- [Guide GitHub](01-github-compte-et-clone.md) · [Guide Docker](02-installation-docker.md) · [Guide Telegram](03-installation-telegram.md)
 
 > Un terme manque ? Ajoute-le ici, c'est un document vivant !

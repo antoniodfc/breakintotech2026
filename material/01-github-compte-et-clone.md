@@ -160,7 +160,7 @@ Tu as maintenant tout le code en local. Vérifie avec :
 ls
 ```
 
-Tu dois voir les dossiers du projet, dont `mentorpilot/` et `material/`.
+Tu dois voir les dossiers du projet, dont `bitmentor/` et `material/`.
 
 ---
 
@@ -203,4 +203,4 @@ git push                        # envoie sur GitHub
 | `Authentication failed` au `push` | Mot de passe au lieu d'un token | Crée un **Personal Access Token** et utilise-le |
 | `Permission denied (publickey)` | Tu utilises une URL SSH sans clé configurée | Clone plutôt en **HTTPS** |
 
-➡️ **Suite : [Glossaire débutant](04-glossaire.md)**
+➡️ **Suite : [Installer Docker](02-installation-docker.md)**
