@@ -34,6 +34,10 @@ Ton compte est prêt.
 
 Pour **cloner** (télécharger) un repo, tu as besoin de l'outil **git**.
 
+> 📟 **Pas sûr de ce qu'est le « terminal » / la « CLI » ni comment l'ouvrir sur ton
+> système ?** Tout est expliqué dans le
+> [glossaire → Terminal](04-glossaire.md#terminal-ou-ligne-de-commande).
+
 D'abord, vérifie s'il n'est pas **déjà installé** (souvent le cas) en tapant dans ton
 terminal :
 

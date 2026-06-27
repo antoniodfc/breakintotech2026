@@ -14,10 +14,20 @@ Utilise `Cmd + F` pour chercher un mot.
 
 ## 1. Les bases (tech & code)
 
-### Terminal (ou « ligne de commande »)
-Une fenêtre où tu tapes des **commandes texte** au lieu de cliquer. Sur Mac il s'appelle
-**Terminal**. C'est là qu'on lance Git, Docker, etc.
+### <a id="terminal-ou-ligne-de-commande"></a>Terminal (ou « ligne de commande », ou « CLI »)
+Une fenêtre où tu tapes des **commandes texte** au lieu de cliquer, puis tu appuies sur
+**Entrée**. C'est là qu'on lance Git, Docker, etc. **CLI** = *Command Line Interface*,
+c'est le même outil.
+Le nom et la façon de l'ouvrir changent selon ton système :
+
+| Système | Appli à ouvrir | Comment l'ouvrir |
+|---------|----------------|------------------|
+| 🍎 Mac | **Terminal** | `Cmd + Espace` → « Terminal » → `Entrée` |
+| 🪟 Windows | **PowerShell** (ou Terminal Windows) | Menu Démarrer → « PowerShell » → `Entrée` |
+| 🐧 Linux | **Terminal** | `Ctrl + Alt + T`, ou cherche « Terminal » |
+
 Exemple de commande : `ls` (lister les fichiers), `cd` (changer de dossier).
+Une commande **« En CLI »** = une commande à taper dans cette fenêtre.
 
 ### Commande
 Une instruction qu'on tape dans le terminal. Structure typique :

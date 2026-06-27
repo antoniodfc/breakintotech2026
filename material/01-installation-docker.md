@@ -1,5 +1,13 @@
 # 🐳 Guide 1 — Installer Docker
 
+## Pourquoi ce guide ? (le but)
+
+L'objectif de cette étape est de **préparer ta machine** pour faire tourner
+l'application MentorPilot — **sans** avoir à installer Python, des librairies ou à
+te battre avec des versions. Tu installes **un seul outil, Docker**, et à la fin
+(étape 5) tu pourras **lancer tout le projet en une commande**. C'est la fondation :
+les guides suivants (Telegram, GitHub) s'appuient dessus.
+
 ## C'est quoi Docker, en une phrase ?
 
 Docker permet de lancer une application dans une **boîte isolée** (un « conteneur »)
@@ -8,6 +16,37 @@ librairies…). Résultat : **tu n'installes pas Python toi-même**, tu n'as pas
 soucier des versions, et « ça marche pareil sur toutes les machines ».
 
 > Plus de détails dans le [glossaire → Docker / Image / Conteneur](04-glossaire.md#docker).
+
+---
+
+## 📟 D'abord : c'est quoi le « terminal » (la « CLI ») ?
+
+Dans ce guide (et les suivants) tu verras souvent les mots **terminal**, **CLI** ou
+**ligne de commande**. C'est **la même chose** : une fenêtre où, au lieu de cliquer
+sur des boutons, tu **tapes une commande texte** (par ex. `docker --version`) puis tu
+appuies sur **Entrée**. C'est l'outil standard pour piloter Docker, Git, etc.
+
+> **CLI** = *Command Line Interface*, « interface en ligne de commande ». À l'opposé,
+> une interface où tu cliques s'appelle une **GUI** (interface graphique).
+
+**Comment l'ouvrir selon ton système :**
+
+| Système | Application à ouvrir | Comment la trouver |
+|---------|----------------------|--------------------|
+| 🍎 **Mac** | **Terminal** | `Cmd + Espace`, tape « Terminal », puis `Entrée` |
+| 🪟 **Windows** | **PowerShell** (ou *Terminal Windows*) | Menu Démarrer → tape « PowerShell » → `Entrée` |
+| 🐧 **Linux** | **Terminal** | Raccourci `Ctrl + Alt + T`, ou cherche « Terminal » dans tes applis |
+
+**Comment ça marche, concrètement :**
+
+1. Tu **tapes** (ou copies-colles) une commande.
+2. Tu appuies sur **Entrée** pour l'exécuter.
+3. Le terminal **affiche le résultat** (ou une erreur) juste en dessous, puis attend
+   la commande suivante. Une commande qui « ne dit rien » a souvent juste réussi.
+
+> Quand une étape indique **« En CLI »**, ça veut simplement dire : « ouvre le
+> terminal ci-dessus et tape la commande indiquée ». Détails dans le
+> [glossaire → Terminal & Commande](04-glossaire.md#terminal-ou-ligne-de-commande).
 
 ---
 
@@ -145,6 +184,11 @@ https://docs.docker.com/engine/install/.)*
 
 ## Étape 4 — Vérifier dans le terminal *(tous systèmes)*
 
+**But de l'étape :** s'assurer que Docker est **bien installé et fonctionnel**
+*avant* de lancer le vrai projet. Deux contrôles : 1) la commande `docker` est
+reconnue, 2) Docker sait réellement télécharger et exécuter un conteneur. Si ces
+deux-là passent, l'étape 5 marchera.
+
 Dans ton terminal (Terminal sur Mac, PowerShell sur Windows), tape :
 
 ```bash
@@ -174,8 +218,16 @@ Si tu vois **« Hello from Docker! »**, tout est bon.
 
 ## Étape 5 — Lancer MentorPilot avec Docker
 
-Une fois le repo cloné (voir [guide GitHub](03-github-compte-et-clone.md)) et le
-`.env` rempli (voir [guide Telegram](02-installation-telegram.md)) :
+**But de l'étape :** c'est ici que Docker sert vraiment. La commande ci-dessous
+**construit l'application** (à partir du `Dockerfile`) puis **la démarre** dans un
+conteneur, en arrière-plan. À partir de là, ton mentor IA tourne sur ta machine.
+
+> ℹ️ Cette étape suppose les deux autres guides déjà faits : le repo **cloné**
+> (voir [guide GitHub](03-github-compte-et-clone.md)) et le fichier `.env` **rempli**
+> avec tes clés (voir [guide Telegram](02-installation-telegram.md)). Sans eux, l'app
+> démarrera mais ne pourra pas se connecter.
+
+Une fois ces prérequis en place :
 
 ```bash
 cd mentorpilot

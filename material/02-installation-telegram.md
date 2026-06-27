@@ -108,7 +108,11 @@ C'est ta **`DEEPSEEK_API_KEY`**.
 
 ## Étape 6 — Remplir le fichier `.env`
 
-Dans le dossier `mentorpilot/`, crée ton fichier de configuration à partir du modèle :
+Dans le dossier `mentorpilot/`, crée ton fichier de configuration à partir du modèle.
+
+> 📟 Ces commandes se tapent dans le **terminal**. Besoin d'un rappel sur comment
+> l'ouvrir selon ton système ? Voir le
+> [glossaire → Terminal](04-glossaire.md#terminal-ou-ligne-de-commande).
 
 ```bash
 cd mentorpilot
