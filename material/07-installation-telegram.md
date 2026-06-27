@@ -54,7 +54,7 @@ dans le fichier `.env`.
 
 **Copie ce token** : c'est ton **`TELEGRAM_BOT_TOKEN`**.
 
-> 💡 **Le username que tu as choisi n'a aucune importance pour le projet** : c'est ce
+> **Le username que tu as choisi n'a aucune importance pour le projet** : c'est ce
 > **token** (unique à ton bot) qui identifie ton bot dans le code et le `.env`. Tu peux
 > donc prendre le username que tu veux, du moment que BotFather l'accepte.
 
@@ -159,7 +159,7 @@ TZ=Europe/Paris
 
 ---
 
-## Étape 7 — Lancer BitMentor 🚀 (le grand moment)
+## Étape 7 — Lancer BitMentor (le grand moment)
 
 C'est **le premier lancement du projet**. Tout est prêt : le code est cloné
 ([guide GitHub](05-github-compte-et-clone.md)), Docker est installé

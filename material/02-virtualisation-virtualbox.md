@@ -55,7 +55,7 @@ c'est volontaire :
    identique à celle des autres élèves → moins de bugs « ça marche pas chez moi », et
    on peut t'aider plus facilement.
 
-> 🧠 **Analogie :** une VM, c'est comme un **appartement témoin** monté dans un hangar.
+> **Analogie :** une VM, c'est comme un **appartement témoin** monté dans un hangar.
 > Tu peux y repeindre les murs, tout casser et tout refaire : le hangar (ton Windows)
 > n'a pas bougé.
 
@@ -67,7 +67,7 @@ c'est volontaire :
 des machines virtuelles. C'est notre **hyperviseur**. On l'installe sur Windows, puis
 on lui demandera de créer la VM Ubuntu au guide suivant.
 
-> 🍎 **Sur Mac à puce Apple (M1/M2/M3/M4) :** VirtualBox est instable, voire ne démarre
+> **Sur Mac à puce Apple (M1/M2/M3/M4) :** VirtualBox est instable, voire ne démarre
 > pas. **Ne suis pas ce guide sur un tel Mac** — écris-nous d'abord, on te donnera la
 > marche à suivre adaptée lors d'une session individuelle.
 

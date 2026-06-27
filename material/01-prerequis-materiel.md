@@ -8,7 +8,7 @@ et tu peux tout supprimer à la fin sans laisser de trace.
 Avant de commencer, vérifie en **5 minutes** que ton matériel va suivre. Pas besoin
 d'un ordinateur récent ou puissant : il faut surtout vérifier **4 points simples**.
 
-> 💡 La case la plus souvent oubliée n'est **pas** la puissance — c'est l'**espace
+> La case la plus souvent oubliée n'est **pas** la puissance — c'est l'**espace
 > disque libre**. C'est le point n°1 qui bloque les débutants.
 
 ---
@@ -42,7 +42,7 @@ blocage technique — c'est l'esprit de BIT.**
 | **Type de disque** | HDD (lent) | SSD | Sur SSD tout démarre vite. Sur vieux HDD c'est lent, mais ça marche. |
 | **Virtualisation** | VT-x / AMD-V activée | idem | **Obligatoire.** Souvent désactivée par défaut → voir l'étape 4. |
 
-> 🔑 **Règle d'or :** le confort dépend bien plus du **SSD** et de l'**espace libre**
+> **Règle d'or :** le confort dépend bien plus du **SSD** et de l'**espace libre**
 > que de la puissance brute du processeur. Un PC modeste avec un SSD et 50 Go libres
 > vivra mieux le parcours qu'un PC puissant au disque saturé.
 
@@ -50,7 +50,7 @@ blocage technique — c'est l'esprit de BIT.**
 
 ## Comment vérifier (Windows 10 / 11)
 
-> 🍎 **Sur Mac :** menu  → *À propos de ce Mac* pour la RAM, le processeur et le
+> **Sur Mac :** menu  → *À propos de ce Mac* pour la RAM, le processeur et le
 > stockage. ⚠️ **Important** : sur les Mac à puce Apple (M1/M2/M3/M4), VirtualBox
 > fonctionne mal voire pas du tout. **Si tu es sur un Mac récent, écris-nous avant
 > de commencer** : on te donnera la marche à suivre adaptée (session individuelle).
@@ -70,7 +70,7 @@ Même écran que l'étape 1 : lignes **« Processeur »** et **« Type du systè
 Ouvre l'**Explorateur de fichiers** → **Ce PC**. Sous le disque **(C:)**, lis
 « … **Go libres** sur … Go ». **C'est le premier chiffre qui compte.**
 
-> 🧹 **Manque de place ?** Vide la corbeille, désinstalle les logiciels inutilisés,
+> **Manque de place ?** Vide la corbeille, désinstalle les logiciels inutilisés,
 > ou déplace photos/vidéos sur un disque externe ou un cloud. **Objectif : 50 Go
 > libres minimum.**
 

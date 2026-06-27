@@ -1,4 +1,4 @@
-# 🐳 Guide 6 — Installer Docker (dans Ubuntu)
+# Guide 6 — Installer Docker (dans Ubuntu)
 
 > ✅ **Où on en est :** tu travailles maintenant **dans ta VM Ubuntu** (guides
 > [1 à 4](01-prerequis-materiel.md)) et tu as **cloné le projet**
@@ -92,7 +92,7 @@ Puis teste que tout marche **réellement** :
 docker run hello-world
 ```
 
-Si tu vois **« Hello from Docker! »**, tout est bon. 🎉
+Si tu vois **« Hello from Docker! »**, tout est bon.
 
 ![Sortie du terminal Ubuntu montrant « Hello from Docker! »](img/docker-hello-world.png)
 

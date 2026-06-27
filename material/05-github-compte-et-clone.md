@@ -23,7 +23,7 @@ Un compte GitHub est **gratuit** et se crée dans un **navigateur web** (Firefox
 déjà installé dans ta VM Ubuntu — tu peux aussi le faire depuis ton téléphone ou un
 autre ordinateur, peu importe).
 
-> 💼 **Important — ton username est public et durable.** Les recruteurs regardent les
+> **Important — ton username est public et durable.** Les recruteurs regardent les
 > profils GitHub. Choisis un nom d'utilisateur **professionnel et sobre** : idéalement
 > ton `prénom` + `nom` (ex : `julie-martin`, `martinjulie`). **Évite** les pseudos type
 > `xX_dark_dev_Xx`. Tu le garderas longtemps : autant qu'il fasse sérieux sur un CV.
@@ -55,7 +55,7 @@ autre ordinateur, peu importe).
 
 ✅ **Ton compte est prêt.** Tu peux te connecter sur https://github.com.
 
-> 🔒 **Conseil sécurité (recommandé) :** active la **double authentification (2FA)**
+> **Conseil sécurité (recommandé) :** active la **double authentification (2FA)**
 > dans *Settings → Password and authentication*. GitHub la rend de toute façon
 > obligatoire à terme — autant le faire maintenant, c'est un bon réflexe de pro.
 
@@ -65,7 +65,7 @@ autre ordinateur, peu importe).
 
 Pour **cloner** (télécharger) un repo, tu as besoin de l'outil **git**.
 
-> 📟 **Pas sûr de ce qu'est le « terminal » / la « CLI » ?** C'est la fenêtre où tu
+> **Pas sûr de ce qu'est le « terminal » / la « CLI » ?** C'est la fenêtre où tu
 > tapes des commandes, ouverte au [guide précédent](04-installer-vm-ubuntu.md)
 > (`Ctrl + Alt + T`). Détails dans le
 > [glossaire → Terminal](08-glossaire.md#terminal-ou-ligne-de-commande).

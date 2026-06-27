@@ -90,7 +90,7 @@ Compatible avec un emploi, une famille, une vie.
 
 ---
 
-## 🚀 Le projet que tu vas construire : BitMentor
+## Le projet que tu vas construire : BitMentor
 
 Pendant les 6 semaines, tu construis **BitMentor** — un mentor IA sur Telegram
 (une flotte d'agents Python, lancée avec Docker) qui te génère une roadmap puis
@@ -112,20 +112,20 @@ Chaque étape est un guide illustré, sans prérequis, dans [`material/`](materi
    → [Docker](material/06-installation-docker.md)
 5. **Configurer & lancer** — créer ton bot Telegram, remplir le `.env`, démarrer BitMentor.
    → [Telegram + lancement](material/07-installation-telegram.md)
-6. **`/start` sur Telegram** 🎉 — ton mentor IA est en ligne.
+6. **`/start` sur Telegram** — ton mentor IA est en ligne.
 
 > Un mot inconnu ? Tout est expliqué depuis zéro dans le
 > [glossaire](material/08-glossaire.md) (terminal, Git, Docker, VM, Telegram…).
 
-📂 **Le code du projet** → [`bitmentor/`](bitmentor/) *(doc technique dans son README)*
+**Le code du projet** → [`bitmentor/`](bitmentor/) *(doc technique dans son README)*
 
 ---
 
 ## Prêt à faire le premier pas ?
 
-- 🌐 [BIT-formation.com](https://BIT-formation.com)
-- 📧 Bitech.formation@gmail.com
-- 📱 [@BIT-formation](https://instagram.com/BIT-formation) — Instagram · LinkedIn · TikTok
+- [BIT-formation.com](https://BIT-formation.com)
+- Bitech.formation@gmail.com
+- [@BIT-formation](https://instagram.com/BIT-formation) — Instagram · LinkedIn · TikTok
 
 ---
 

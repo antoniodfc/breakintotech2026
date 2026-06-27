@@ -45,7 +45,7 @@ en est un troisième — et c'est celui qu'on va utiliser.
 - **Ubuntu** est **la distribution Linux la plus populaire pour débuter** : simple,
   bien finie, énorme communauté.
 
-> 🧠 **Analogie :** Linux est le **moteur**. Une *distribution* (Ubuntu, Debian,
+> **Analogie :** Linux est le **moteur**. Une *distribution* (Ubuntu, Debian,
 > Fedora…) est la **voiture complète** construite autour de ce moteur. On choisit
 > Ubuntu parce que c'est la voiture la plus facile à conduire quand on débute.
 
@@ -80,7 +80,7 @@ dans la VM pour lancer l'installation d'Ubuntu.
 1. Va sur le site officiel : **https://ubuntu.com/download/desktop**
 2. Télécharge la dernière version **LTS** proposée (ex : *Ubuntu 24.04 LTS*).
 
-   > 💡 **LTS** = *Long Term Support* (« support longue durée ») : une version stable,
+   > **LTS** = *Long Term Support* (« support longue durée ») : une version stable,
    > maintenue **5 ans**. C'est celle à privilégier — pas les versions intermédiaires.
 
 3. Le téléchargement est **lourd (~5–6 Go)** : lance-le sur une connexion stable et
@@ -88,7 +88,7 @@ dans la VM pour lancer l'installation d'Ubuntu.
 
 ![Page de téléchargement d'Ubuntu Desktop LTS](img/ubuntu-download.png)
 
-> 📦 **`amd64`** = la version pour processeurs **64 bits** classiques (Intel/AMD) —
+> **`amd64`** = la version pour processeurs **64 bits** classiques (Intel/AMD) —
 > celle qu'il te faut sur un PC Windows. (Rien à voir avec la marque AMD.)
 
 ---

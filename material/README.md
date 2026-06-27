@@ -26,11 +26,11 @@ virtuelle), puis on installe les outils **dedans**, et enfin on lance le projet.
 
 > *\* hors temps de téléchargement de l'ISO (~5–6 Go).*
 
-> 👉 **Suis-les dans cet ordre.** Les guides 1→4 montent ton **environnement Ubuntu** ;
+> **Suis-les dans cet ordre.** Les guides 1→4 montent ton **environnement Ubuntu** ;
 > à partir du guide 5, **tout se passe dans Ubuntu** (Git, Docker, le projet). C'est le
 > guide Telegram (7) qui **remplit le `.env` et lance le projet** à la fin.
 
-> 🍎 **Sur un Mac à puce Apple (M1–M4) :** VirtualBox est instable — **contacte-nous
+> **Sur un Mac à puce Apple (M1–M4) :** VirtualBox est instable — **contacte-nous
 > avant de commencer** pour la marche à suivre adaptée (le parcours ci-dessous cible
 > Windows).
 
@@ -58,7 +58,7 @@ virtuelle), puis on installe les outils **dedans**, et enfin on lance le projet.
    docker compose up -d   (depuis le dossier bitmentor/)
             │
             ▼
-   /start sur Telegram 🎉
+   /start sur Telegram
 ```
 
 > **Bloqué sur un mot ?** Ouvre le [glossaire](08-glossaire.md) : tout y est expliqué

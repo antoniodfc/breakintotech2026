@@ -5,7 +5,7 @@ d'Ubuntu** téléchargée ([guide 3](03-ubuntu-os-et-iso.md)). On va maintenant 
 machine virtuelle** puis **installer Ubuntu dedans**. Compte ~30–45 minutes (surtout de
 l'attente).
 
-> 🛟 **Rappel rassurant :** tout se passe **dans la VM**. Même quand l'installeur parlera
+> **Rappel rassurant :** tout se passe **dans la VM**. Même quand l'installeur parlera
 > d'« effacer le disque », il s'agit du **disque virtuel** de la VM — **ton Windows et
 > tes fichiers ne sont jamais touchés.**
 
@@ -54,7 +54,7 @@ Clique **Terminer**. Ta VM apparaît dans la liste, **éteinte**.
 Sélectionne ta VM `BIT-Ubuntu` → clique **« Démarrer »** (la flèche verte). Une fenêtre
 s'ouvre : c'est l'écran de ta machine virtuelle. Elle **démarre sur l'ISO** d'Ubuntu.
 
-> 🖱️ **Souris « capturée » ?** Si la VM capture ta souris/clavier, la touche pour les
+> **Souris « capturée » ?** Si la VM capture ta souris/clavier, la touche pour les
 > **libérer** est affichée en bas à droite (par défaut **`Ctrl droit`**).
 
 ### Étape 5 — Lancer l'installation
@@ -71,7 +71,7 @@ s'ouvre : c'est l'écran de ta machine virtuelle. Elle **démarre sur l'ISO** d'
    aller plus vite (tu les feras après).
 3. À l'étape du disque, choisis **« Effacer le disque et installer Ubuntu »**.
 
-> 🛟 **C'est SANS DANGER** : ce « disque » est le **disque virtuel de 40 Go** que tu
+> **C'est SANS DANGER** : ce « disque » est le **disque virtuel de 40 Go** que tu
 > viens de créer, **vide**. Ça **n'efface pas** ton Windows ni tes fichiers — ils sont
 > sur la machine hôte, hors de la VM.
 
@@ -87,16 +87,16 @@ s'ouvre : c'est l'écran de ta machine virtuelle. Elle **démarre sur l'ISO** d'
 
 ### Étape 8 — Laisser installer, puis redémarrer
 
-L'installation se lance (**10–20 min**, c'est le moment d'une pause ☕).
+L'installation se lance (**10–20 min**, c'est le moment d'une pause).
 
 À la fin, un message propose de **redémarrer**. Clique **« Redémarrer maintenant »**.
 
-> 💿 **Si la VM redemande « Please remove the installation medium »** : Ubuntu te
+> **Si la VM redemande « Please remove the installation medium »** : Ubuntu te
 > demande d'« enlever le DVD ». Reviens dans VirtualBox → menu **Périphériques →
 > Lecteurs optiques → Retirer le disque du lecteur** si besoin, puis appuie sur
 > `Entrée`. (En général VirtualBox éjecte l'ISO automatiquement.)
 
-### Étape 9 — Premier démarrage d'Ubuntu 🎉
+### Étape 9 — Premier démarrage d'Ubuntu
 
 La VM redémarre **sur Ubuntu installé**. Connecte-toi avec ton mot de passe. Tu arrives
 sur le **bureau Ubuntu** : tu as une vraie machine Linux qui tourne dans une fenêtre !

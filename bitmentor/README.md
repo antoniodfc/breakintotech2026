@@ -7,7 +7,7 @@ Tu donnes ton objectif (ex : *« devenir développeur web »*) et ton niveau →
 
 Architecture : une flotte d'agents + human-in-the-loop + Telegram + Docker.
 
-> 🧑‍🎓 **Grand débutant ? Suis le parcours du dossier
+> **Grand débutant ? Suis le parcours du dossier
 > [`../material/`](../material/README.md).** Tu y montes d'abord un environnement
 > **Ubuntu dans une machine virtuelle** (VirtualBox), puis tu installes Git, Docker et
 > le projet **dedans**, pas à pas. Ce README-ci est la **doc technique** condensée :
