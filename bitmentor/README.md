@@ -7,9 +7,11 @@ Tu donnes ton objectif (ex : *« devenir développeur web »*) et ton niveau →
 
 Architecture : une flotte d'agents + human-in-the-loop + Telegram + Docker.
 
-> 🧑‍🎓 **Grand débutant ?** Ce README est la **doc technique** du projet. Pour
-> l'installer pas à pas (terminal, Docker, Telegram, GitHub), suis d'abord les
-> guides illustrés du dossier [`../material/`](../material/README.md).
+> 🧑‍🎓 **Grand débutant ? Suis le parcours du dossier
+> [`../material/`](../material/README.md).** Tu y montes d'abord un environnement
+> **Ubuntu dans une machine virtuelle** (VirtualBox), puis tu installes Git, Docker et
+> le projet **dedans**, pas à pas. Ce README-ci est la **doc technique** condensée :
+> il suppose que tu as déjà un environnement Linux/Docker (c'est le cas dans la VM).
 
 ---
 
@@ -57,7 +59,9 @@ L'état (roadmap + progression) est persisté dans `state.json` — pas de base 
 
 ## Prérequis
 
-- **Python 3.12+** (ou **Docker** pour le mode 24/7)
+- Un environnement **Linux + Docker** — pour le parcours BIT, c'est la **VM Ubuntu**
+  montée via [`../material/`](../material/README.md). *(Python 3.12+ en local n'est
+  utile que pour le mode dev avancé ci-dessous.)*
 - Un smartphone avec **Telegram**
 - Une clé API **DeepSeek** (~5M tokens offerts à l'inscription)
 - ~10 minutes
@@ -89,7 +93,19 @@ cp .env.example .env
 
 ## Lancement
 
-### En local (Python)
+### En Docker (recommandé — dans la VM Ubuntu)
+
+C'est la voie du parcours : depuis le dossier `bitmentor/`, dans le terminal Ubuntu.
+
+```bash
+cd bitmentor
+docker compose up -d --build
+docker compose logs -f bitmentor
+```
+
+### En local (Python) — *mode dev avancé, optionnel*
+
+Pour développer sans Docker (utile pour debugger le code) :
 
 ```bash
 cd bitmentor
@@ -97,14 +113,6 @@ python -m venv .venv
 source .venv/bin/activate        # Windows : .venv\Scripts\activate
 pip install -r requirements.txt
 python orchestrator.py
-```
-
-### En Docker (24/7)
-
-```bash
-cd bitmentor
-docker compose up -d --build
-docker compose logs -f bitmentor
 ```
 
 Tu dois voir `Telegram bot started` puis `BitMentor démarré`, et recevoir

@@ -98,8 +98,8 @@ une leçon par jour. C'est ton **projet final**, déployé et reproductible par 
 
 - 📂 **Le code du projet** → [`bitmentor/`](bitmentor/) *(doc technique dans son README)*
 - 🧭 **Les guides pas-à-pas pour le mettre en route** *(débutant, sans prérequis)* →
-  [`material/`](material/README.md) — commence par le
-  [guide GitHub](material/01-github-compte-et-clone.md).
+  [`material/`](material/README.md) — commence par les
+  [prérequis matériel](material/01-prerequis-materiel.md).
 
 > Aucune expérience requise : chaque outil (terminal, Git, Docker, Telegram) est
 > expliqué depuis zéro dans [`material/`](material/README.md).

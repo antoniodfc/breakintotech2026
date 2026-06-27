@@ -1,4 +1,8 @@
-# Guide 3 — GitHub : créer un compte et cloner un repo
+# Guide 5 — GitHub : créer un compte et cloner le repo (dans Ubuntu)
+
+> ✅ **Où on en est :** ta **VM Ubuntu** est installée et à jour (guides
+> [1 à 4](01-prerequis-materiel.md)). À partir d'ici, **tout se fait dans Ubuntu** :
+> les commandes se tapent dans le **terminal d'Ubuntu** (`Ctrl + Alt + T`).
 
 ## C'est quoi GitHub ?
 
@@ -6,10 +10,10 @@
 dans un **dépôt** (en anglais « repository », souvent abrégé **repo**). C'est aussi une
 sauvegarde en ligne et un historique de toutes les modifications.
 
-- **Git** = l'outil (sur ton ordinateur) qui suit les versions du code.
+- **Git** = l'outil (dans ton Ubuntu) qui suit les versions du code.
 - **GitHub** = le site web qui héberge le code en ligne.
 
-> Voir le [glossaire → Git / GitHub / Repo / Cloner](04-glossaire.md#git).
+> Voir le [glossaire → Git / GitHub / Repo / Cloner](08-glossaire.md#git).
 
 ---
 
@@ -30,72 +34,34 @@ Ton compte est prêt.
 
 ---
 
-## Étape 2 — Installer Git sur ton ordinateur
+## Étape 2 — Installer Git dans Ubuntu
 
 Pour **cloner** (télécharger) un repo, tu as besoin de l'outil **git**.
 
-> 📟 **Pas sûr de ce qu'est le « terminal » / la « CLI » ni comment l'ouvrir sur ton
-> système ?** Tout est expliqué dans le
-> [glossaire → Terminal](04-glossaire.md#terminal-ou-ligne-de-commande).
+> 📟 **Pas sûr de ce qu'est le « terminal » / la « CLI » ?** C'est la fenêtre où tu
+> tapes des commandes, ouverte au [guide précédent](04-installer-vm-ubuntu.md)
+> (`Ctrl + Alt + T`). Détails dans le
+> [glossaire → Terminal](08-glossaire.md#terminal-ou-ligne-de-commande).
 
-D'abord, vérifie s'il n'est pas **déjà installé** (souvent le cas) en tapant dans ton
-terminal :
+D'abord, vérifie s'il n'est pas **déjà installé** (souvent le cas sous Ubuntu) :
 
 ```bash
 git --version
 ```
 
-- Si une version s'affiche (`git version 2.x.x`) → c'est déjà installé, **passe à l'étape 3**.
-- Si tu obtiens une erreur (`command not found` / `n'est pas reconnu`) → installe-le
-  ci-dessous, selon ton système.
-
-### Sur Mac
-
-Le plus simple : tape `git --version` dans le **Terminal** — si Git n'est pas là, macOS
-te proposera automatiquement d'installer les **« Command Line Tools »**, accepte.
-
-Sinon, en CLI avec [Homebrew](https://brew.sh) (le gestionnaire de paquets de macOS) :
+- Si une version s'affiche (`git version 2.x.x`) → c'est déjà installé, **passe à
+  l'étape 3**.
+- Si tu obtiens `command not found` → installe-le avec **apt** (le gestionnaire de
+  paquets d'Ubuntu) :
 
 ```bash
-# 1. Installer Homebrew (à sauter si tu l'as déjà)
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# 2. Installer Git
-brew install git
+sudo apt update && sudo apt install -y git
 ```
 
-### Sur Windows
-
-**En CLI** avec **winget** (inclus dans Windows 10/11), dans PowerShell :
-
-```powershell
-winget install --id Git.Git -e --source winget
-```
-
-> ⚠️ **Ferme puis rouvre PowerShell** après l'installation pour que la commande `git`
-> soit reconnue.
-
-*(Alternative graphique : télécharge **Git for Windows** sur https://git-scm.com/download/win,
-installe avec les options par défaut, puis utilise **Git Bash** comme terminal.)*
-
-### Sur Linux
-
-Selon ta distribution :
-
-```bash
-# Debian / Ubuntu
-sudo apt update && sudo apt install git
-
-# Fedora
-sudo dnf install git
-
-# Arch / Manjaro
-sudo pacman -S git
-```
+- `sudo` → en administrateur (il demande ton mot de passe Ubuntu).
+- `apt update` → rafraîchit la liste des paquets ; `apt install -y git` → installe Git.
 
 ### Vérifier l'installation
-
-Dans un terminal **neuf**, confirme que Git répond :
 
 ```bash
 git --version
@@ -131,7 +97,7 @@ Sur la page GitHub du projet :
 
 > **HTTPS vs SSH ?** HTTPS = simple, juste l'URL. SSH = plus avancé, nécessite
 > de configurer une clé. **Commence par HTTPS.** Voir
-> [glossaire → HTTPS / SSH](04-glossaire.md#https-vs-ssh).
+> [glossaire → HTTPS / SSH](08-glossaire.md#https-vs-ssh).
 
 ---
 
@@ -187,7 +153,7 @@ git push                        # envoie sur GitHub
 > La toute première fois que tu fais `git push`, GitHub te demandera de
 > t'authentifier. Le mot de passe classique ne marche plus : utilise un
 > **Personal Access Token** (jeton). Voir
-> [glossaire → Personal Access Token](04-glossaire.md#personal-access-token-pat).
+> [glossaire → Personal Access Token](08-glossaire.md#personal-access-token-pat).
 
 > ⚠️ **Ne pousse jamais ton fichier `.env`** (il contient tes secrets). Il est déjà
 > ignoré par le `.gitignore` du projet, donc tu es protégé.
@@ -203,4 +169,4 @@ git push                        # envoie sur GitHub
 | `Authentication failed` au `push` | Mot de passe au lieu d'un token | Crée un **Personal Access Token** et utilise-le |
 | `Permission denied (publickey)` | Tu utilises une URL SSH sans clé configurée | Clone plutôt en **HTTPS** |
 
-➡️ **Suite : [Installer Docker](02-installation-docker.md)**
+➡️ **Suite : [Installer Docker](06-installation-docker.md)**

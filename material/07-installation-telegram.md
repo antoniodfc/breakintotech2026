@@ -12,7 +12,7 @@ dans le fichier `.env`.
 | `TELEGRAM_CHAT_ID` | Ton identifiant perso (pour que le bot t'écrive) | `7042123456` |
 | `DEEPSEEK_API_KEY` | La clé de l'IA qui rédige les leçons | `sk-...` |
 
-> Un *token*, une *clé API* ? Voir le [glossaire](04-glossaire.md#token--cle-api).
+> Un *token*, une *clé API* ? Voir le [glossaire](08-glossaire.md#token--cle-api).
 
 ---
 
@@ -36,9 +36,14 @@ dans le fichier `.env`.
    ```
    /newbot
    ```
-4. Il te demande un **nom** (affiché) — ex : `Mon Mentor IA`
-5. Puis un **username** qui doit **finir par `bot`** — ex : `mon_mentor_2026_bot`
-   *(s'il est déjà pris, essaie une variante)*
+4. Il te demande un **nom** (celui affiché en haut de la conversation). Ce nom **peut
+   être le même pour tout le monde**, ex : `Mon Mentor IA`.
+5. Puis un **username** (le `@…`) qui doit **finir par `bot`**.
+   > ⚠️ **Ce username est unique dans tout Telegram** : personne d'autre ne peut avoir
+   > le même. Rends-le **personnel** en y glissant ton prénom et/ou des chiffres —
+   > ex : `mentor_julie_2026_bot`, `bitmentor_dupont07_bot`, `mentor_amine_bot`.
+   > Si BotFather répond **« Sorry, this username is already taken »**, ajoute des
+   > chiffres ou change un mot, et réessaie jusqu'à ce qu'il l'accepte.
 6. BotFather te répond avec un message contenant ton **token** :
    ```
    Use this token to access the HTTP API:
@@ -48,6 +53,10 @@ dans le fichier `.env`.
 ![Conversation BotFather après /newbot montrant le token du bot](img/botfather-newbot.png)
 
 **Copie ce token** : c'est ton **`TELEGRAM_BOT_TOKEN`**.
+
+> 💡 **Le username que tu as choisi n'a aucune importance pour le projet** : c'est ce
+> **token** (unique à ton bot) qui identifie ton bot dans le code et le `.env`. Tu peux
+> donc prendre le username que tu veux, du moment que BotFather l'accepte.
 
 > ⚠️ **Ne partage JAMAIS ce token** publiquement. Quiconque l'a peut contrôler ton bot.
 > Si tu le divulgues par erreur, renvoie `/revoke` à BotFather pour en générer un nouveau.
@@ -108,28 +117,26 @@ C'est ta **`DEEPSEEK_API_KEY`**.
 
 ## Étape 6 — Remplir le fichier `.env`
 
-Dans le dossier `bitmentor/`, crée ton fichier de configuration à partir du modèle.
-
-> 📟 Ces commandes se tapent dans le **terminal**. Besoin d'un rappel sur comment
-> l'ouvrir selon ton système ? Voir le
-> [glossaire → Terminal](04-glossaire.md#terminal-ou-ligne-de-commande).
+Dans le terminal d'**Ubuntu**, place-toi dans le dossier `bitmentor/` et crée ton
+fichier de configuration à partir du modèle :
 
 ```bash
 cd bitmentor
 cp .env.example .env
 ```
 
-> 🪟 **Sur Windows** : `cp` fonctionne dans **PowerShell** et **Git Bash**. Dans
-> l'invite de commandes **CMD**, utilise plutôt `copy .env.example .env`.
+Ouvre ensuite `.env` pour le remplir. Le plus simple en ligne de commande, avec
+l'éditeur **nano** :
 
-Ouvre `.env` (dans ton éditeur de code, ex. VS Code) et remplace les valeurs
-d'exemple par **tes vraies clés** :
+```bash
+nano .env
+```
 
-> ⚠️ **Piège Windows** : n'édite **pas** le `.env` avec le **Bloc-notes** —
-> il risque de l'enregistrer sous le nom `.env.txt` (avec une extension cachée),
-> et l'app ne le trouvera plus. Utilise **VS Code** (ou, dans le Bloc-notes,
-> choisis « Type : Tous les fichiers » et nomme bien `.env`). Le fichier doit
-> s'appeler **exactement `.env`**, sans rien après.
+- Modifie les valeurs, puis enregistre avec **`Ctrl + O`** (puis `Entrée`) et quitte
+  avec **`Ctrl + X`**.
+- *(Tu peux aussi l'ouvrir avec l'éditeur de texte graphique d'Ubuntu : `gedit .env`.)*
+
+Remplace les valeurs d'exemple par **tes vraies clés** :
 
 ```ini
 DEEPSEEK_API_KEY=sk-ta_vraie_cle_deepseek
@@ -148,15 +155,15 @@ TZ=Europe/Paris
 
 > ⚠️ **Le fichier `.env` ne doit jamais être partagé ni envoyé sur GitHub.**
 > Bonne nouvelle : il est déjà protégé par le `.gitignore` du projet (voir
-> [glossaire → .gitignore](04-glossaire.md#gitignore)).
+> [glossaire → .gitignore](08-glossaire.md#gitignore)).
 
 ---
 
 ## Étape 7 — Lancer BitMentor 🚀 (le grand moment)
 
 C'est **le premier lancement du projet**. Tout est prêt : le code est cloné
-([guide GitHub](01-github-compte-et-clone.md)), Docker est installé
-([guide Docker](02-installation-docker.md)) et ton `.env` est rempli (étape 6).
+([guide GitHub](05-github-compte-et-clone.md)), Docker est installé
+([guide Docker](06-installation-docker.md)) et ton `.env` est rempli (étape 6).
 
 Depuis le dossier `bitmentor/` :
 
@@ -192,4 +199,4 @@ Envoie alors **`/start`** à ton bot pour définir ton objectif et générer ta 
 | Les leçons arrivent décalées de 1–2 h | `TZ` absent → conteneur en UTC | Ajoute `TZ=Europe/Paris` dans `.env`, puis `docker compose up -d --force-recreate` |
 | Pas de leçon du tout à l'heure prévue | `LESSON_HOUR` invalide | Mets un entier 0–23 et recrée le conteneur |
 
-➡️ **Suite : [Glossaire débutant](04-glossaire.md)** — pour comprendre tous les mots du projet.
+➡️ **Suite : [Glossaire débutant](08-glossaire.md)** — pour comprendre tous les mots du projet.

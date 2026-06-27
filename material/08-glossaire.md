@@ -4,6 +4,7 @@ Tous les mots et concepts du projet, expliqués simplement. Classés par thème.
 Utilise `Cmd + F` pour chercher un mot.
 
 - [1. Les bases (tech & code)](#1-les-bases-tech--code)
+- [1bis. Environnement & virtualisation](#1bis-environnement--virtualisation)
 - [2. Git & GitHub](#2-git--github)
 - [3. Docker](#3-docker)
 - [4. Telegram & bots](#4-telegram--bots)
@@ -22,9 +23,9 @@ Le nom et la façon de l'ouvrir changent selon ton système :
 
 | Système | Appli à ouvrir | Comment l'ouvrir |
 |---------|----------------|------------------|
-| 🍎 Mac | **Terminal** | `Cmd + Espace` → « Terminal » → `Entrée` |
-| 🪟 Windows | **PowerShell** (ou Terminal Windows) | Menu Démarrer → « PowerShell » → `Entrée` |
-| 🐧 Linux | **Terminal** | `Ctrl + Alt + T`, ou cherche « Terminal » |
+| Mac | **Terminal** | `Cmd + Espace` → « Terminal » → `Entrée` |
+| Windows | **PowerShell** (ou Terminal Windows) | Menu Démarrer → « PowerShell » → `Entrée` |
+| Linux | **Terminal** | `Ctrl + Alt + T`, ou cherche « Terminal » |
 
 Exemple de commande : `ls` (lister les fichiers), `cd` (changer de dossier).
 Une commande **« En CLI »** = une commande à taper dans cette fenêtre.
@@ -86,6 +87,54 @@ Les **messages** qu'affiche un programme pendant qu'il tourne, pour dire ce qu'i
 - **Bug** : un comportement non voulu.
 - **Traceback** : le « rapport d'erreur » de Python qui montre **où** ça a planté
   (la longue liste de `File ".../...py", line X`). On lit surtout la **dernière** ligne.
+
+---
+
+## 1bis. Environnement & virtualisation
+
+### Virtualisation
+Faire tourner **un ordinateur dans un ordinateur**. Ta machine simule un ordinateur
+« virtuel » isolé, avec son propre système — ce qui te permet d'installer Ubuntu **sans
+toucher** à ton Windows, et de tout supprimer à la fin sans trace.
+
+### Machine virtuelle (VM)
+L'ordinateur **virtuel** complet créé par la virtualisation : système, RAM et disque
+simulés. Dans le parcours, c'est ta **VM Ubuntu**.
+
+### Hyperviseur
+Le logiciel qui **crée et fait tourner** les machines virtuelles. Ici : **VirtualBox**.
+
+### Hôte / Invité (host / guest)
+- **Hôte** : ta vraie machine (ton **Windows**).
+- **Invité** : le système qui tourne dans la VM (ton **Ubuntu**).
+
+### VirtualBox
+L'**hyperviseur gratuit** (Oracle) qu'on installe sur Windows pour créer la VM Ubuntu.
+
+### Système d'exploitation (OS)
+Le **logiciel principal** d'un ordinateur, qui relie le matériel et tes applications.
+Windows, macOS et **Linux** en sont. Sans OS, la machine ne fait rien.
+
+### Linux / Distribution
+**Linux** est le cœur (« noyau ») d'un système libre et gratuit. Une **distribution**
+est un système complet construit autour (bureau + outils). **Ubuntu** en est une.
+
+### Ubuntu
+La **distribution Linux** qu'on installe dans la VM. On prend la version **LTS**
+(*Long Term Support*, maintenue 5 ans).
+
+### ISO
+L'**image complète d'un disque d'installation** dans un seul fichier `.iso` (un DVD
+d'installation numérique). On la donne à VirtualBox pour installer Ubuntu.
+
+### `sudo`
+« Faire en administrateur ». On préfixe une commande par `sudo` quand elle modifie le
+système (installer un logiciel…). Ubuntu demande alors ton **mot de passe**.
+
+### `apt`
+Le **gestionnaire de paquets** d'Ubuntu : installe/met à jour des logiciels en une
+commande. Ex : `sudo apt install git`. (`apt update` rafraîchit la liste, `apt upgrade`
+met à jour.)
 
 ---
 
@@ -158,6 +207,23 @@ construit à partir du **Dockerfile**. Elle ne tourne pas toute seule.
 ### Conteneur (container)
 Une **instance qui tourne**, créée à partir d'une image (le gâteau qu'on sort du paquet
 et qu'on mange). C'est dans le conteneur que BitMentor s'exécute réellement.
+
+```
+                  Ton ordinateur — Mac, Windows ou Linux
+┌────────────────────────────────────────────────┐
+│ Conteneur Docker — la « boîte » isolée          │
+│ ┌────────────────────────────────────────────┐ │
+│ │ BitMentor  → le code de l'application       │ │
+│ │ Python     → déjà la bonne version          │ │
+│ │ Librairies → déjà installées                │ │
+│ └────────────────────────────────────────────┘ │
+└────────────────────────────────────────────────┘
+
+  → Tu n'installes pas Python ni les librairies toi-même :
+    tout est déjà DANS la boîte.
+  → Du coup la même boîte tourne à l'identique sur
+    Mac   ·   Windows   ·   Linux
+```
 
 ### Dockerfile
 La **recette** pour construire l'image : « pars de Python 3.12, installe les
@@ -331,6 +397,6 @@ Une façon de programmer où le programme peut **gérer plusieurs choses sans se
 ## Pour aller plus loin
 
 - Le [README du projet](../bitmentor/README.md) — vue d'ensemble et schéma d'architecture
-- [Guide GitHub](01-github-compte-et-clone.md) · [Guide Docker](02-installation-docker.md) · [Guide Telegram](03-installation-telegram.md)
+- Les guides : [1 Prérequis](01-prerequis-materiel.md) · [2 VirtualBox](02-virtualisation-virtualbox.md) · [3 Ubuntu](03-ubuntu-os-et-iso.md) · [4 VM Ubuntu](04-installer-vm-ubuntu.md) · [5 GitHub](05-github-compte-et-clone.md) · [6 Docker](06-installation-docker.md) · [7 Telegram](07-installation-telegram.md)
 
 > Un terme manque ? Ajoute-le ici, c'est un document vivant !
