@@ -111,4 +111,8 @@ Tu vois la fenêtre **« Oracle VirtualBox – Gestionnaire de machines »**, en
 | Avertissement réseau pendant l'install | Normal (cartes réseau virtuelles) | Clique **Yes** / **Continuer** |
 | Sur Mac Apple Silicon, VirtualBox ne démarre pas | VirtualBox mal supporté sur puces M | **Stoppe** et écris-nous : on bascule sur la solution adaptée |
 
+> **Toujours bloqué après ces pistes ?** Déroule la
+> [méthode de débogage (guide 9)](09-debugger-et-demander-de-laide.md) — lire l'erreur,
+> chercher, bien demander à un LLM — puis écris-nous si besoin. Tu n'es jamais seul.
+
 ➡️ **Suite : [Ubuntu : c'est quoi un OS, et télécharger l'ISO](03-ubuntu-os-et-iso.md)**

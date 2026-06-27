@@ -132,4 +132,8 @@ sudo apt update && sudo apt upgrade -y
 | Boucle de redémarrage sur l'installeur | L'ISO est restée « insérée » | **Périphériques → Lecteurs optiques → Retirer le disque**, puis redémarre |
 | Installation très lente | Peu de RAM/CPU alloués ou disque HDD | Vérifie 4 Go RAM + 2 CPU ; patiente sur HDD |
 
+> **Toujours bloqué après ces pistes ?** Déroule la
+> [méthode de débogage (guide 9)](09-debugger-et-demander-de-laide.md) — lire l'erreur,
+> chercher, bien demander à un LLM — puis écris-nous si besoin. Tu n'es jamais seul.
+
 ➡️ **Suite : [GitHub : compte + cloner le repo (dans Ubuntu)](05-github-compte-et-clone.md)**

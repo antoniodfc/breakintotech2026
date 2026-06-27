@@ -196,4 +196,8 @@ git push                        # envoie sur GitHub
 | `Authentication failed` au `push` | Mot de passe au lieu d'un token | Crée un **Personal Access Token** et utilise-le |
 | `Permission denied (publickey)` | Tu utilises une URL SSH sans clé configurée | Clone plutôt en **HTTPS** |
 
+> **Toujours bloqué après ces pistes ?** Déroule la
+> [méthode de débogage (guide 9)](09-debugger-et-demander-de-laide.md) — lire l'erreur,
+> chercher, bien demander à un LLM — puis écris-nous si besoin. Tu n'es jamais seul.
+
 ➡️ **Suite : [Installer Docker](06-installation-docker.md)**

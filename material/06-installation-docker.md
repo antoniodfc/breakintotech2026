@@ -153,4 +153,8 @@ docker compose down
 > docker compose up -d --force-recreate
 > ```
 
+> **Toujours bloqué après ces pistes ?** Déroule la
+> [méthode de débogage (guide 9)](09-debugger-et-demander-de-laide.md) — lire l'erreur,
+> chercher, bien demander à un LLM — puis écris-nous si besoin. Tu n'es jamais seul.
+
 ➡️ **Suite : [Installer & configurer Telegram](07-installation-telegram.md)**

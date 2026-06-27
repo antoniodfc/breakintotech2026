@@ -111,4 +111,8 @@ auras besoin au guide suivant pour l'indiquer à VirtualBox.
 | Tu ne retrouves pas l'ISO | Rangée dans **Téléchargements** par défaut | Ouvre l'Explorateur → **Téléchargements**, cherche `ubuntu-…-amd64.iso` |
 | Doute sur la version à prendre | Plusieurs versions affichées | Prends toujours la **LTS** la plus récente (ex : 24.04 LTS) |
 
+> **Toujours bloqué après ces pistes ?** Déroule la
+> [méthode de débogage (guide 9)](09-debugger-et-demander-de-laide.md) — lire l'erreur,
+> chercher, bien demander à un LLM — puis écris-nous si besoin. Tu n'es jamais seul.
+
 ➡️ **Suite : [Créer & installer la VM Ubuntu (pas à pas)](04-installer-vm-ubuntu.md)**

@@ -199,4 +199,8 @@ Envoie alors **`/start`** à ton bot pour définir ton objectif et générer ta 
 | Les leçons arrivent décalées de 1–2 h | `TZ` absent → conteneur en UTC | Ajoute `TZ=Europe/Paris` dans `.env`, puis `docker compose up -d --force-recreate` |
 | Pas de leçon du tout à l'heure prévue | `LESSON_HOUR` invalide | Mets un entier 0–23 et recrée le conteneur |
 
+> **Toujours bloqué après ces pistes ?** Déroule la
+> [méthode de débogage (guide 9)](09-debugger-et-demander-de-laide.md) — lire l'erreur,
+> chercher, bien demander à un LLM — puis écris-nous si besoin. Tu n'es jamais seul.
+
 ➡️ **Suite : [Glossaire débutant](08-glossaire.md)** — pour comprendre tous les mots du projet.

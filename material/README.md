@@ -23,6 +23,7 @@ virtuelle), puis on installe les outils **dedans**, et enfin on lance le projet.
 | 6 | [Installer Docker](06-installation-docker.md) | Préparer Ubuntu à faire tourner l'app | ~10 min |
 | 7 | [Installer & configurer Telegram](07-installation-telegram.md) | Créer ton bot, remplir le `.env` et **lancer BitMentor** | ~10 min |
 | 8 | [Glossaire débutant](08-glossaire.md) | Comprendre tous les mots du projet | à consulter au besoin |
+| 9 | [Débugger & demander de l'aide](09-debugger-et-demander-de-laide.md) | La méthode pour résoudre un bug + bien interroger un LLM | dès que tu es bloqué |
 
 > *\* hors temps de téléchargement de l'ISO (~5–6 Go).*
 
