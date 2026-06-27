@@ -22,10 +22,10 @@ chacun avec son propre système, isolé des autres.
    │                                                 │
    │   VirtualBox  (l'« hyperviseur »)               │
    │   ┌───────────────────────────────────────────┐ │
-   │   │  Machine virtuelle (VM) — la « VM Ubuntu » │ │
-   │   │  • Son propre système : Ubuntu (Linux)     │ │
-   │   │  • Sa propre RAM / son propre disque       │ │
-   │   │  • C'est ICI qu'on travaille               │ │
+   │   │  Machine virtuelle (VM) — la « VM Ubuntu »│ │
+   │   │  • Son propre système : Ubuntu (Linux)    │ │
+   │   │  • Sa propre RAM / son propre disque      │ │
+   │   │  • C'est ICI qu'on travaille              │ │
    │   └───────────────────────────────────────────┘ │
    │                                                 │
    └─────────────────────────────────────────────────┘
