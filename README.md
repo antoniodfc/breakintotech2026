@@ -1,0 +1,101 @@
+# BIT. — Break Into Tech
+
+> **Ton premier vrai pas dans la tech. Concret, guidé, sans prérequis.**
+
+BIT est un accompagnement de **6 à 8 semaines** pensé pour les personnes qui veulent
+entrer dans la tech mais à qui on n'a jamais expliqué *comment*. Ce n'est pas une
+initiation de plus : c'est une **mise en mouvement**, le chaînon manquant entre
+« je ne sais pas par où commencer » et « j'ai un plan, des bases qui tiennent,
+et la certitude que c'est pour moi. »
+
+---
+
+## Le constat
+
+La tech recrute massivement, mais pas là où on le croit.
+
+- **660 000** emplois directs dans le numérique en France
+- **1er** secteur employeur — 67 650 recrutements de cadres en 2025
+- **85 %** des postes jugés difficiles à pourvoir
+
+Le problème n'est pas la demande : c'est le **manque de profils orientés vers les
+bons métiers**. Les formations de reconversion poussent massivement vers le
+développement web et l'UX/UI design — les métiers les plus concurrentiels.
+Les postes réellement non pourvus se situent ailleurs : **DevOps, Cloud,
+Cybersécurité, Data Engineering, IA…**
+
+> Savoir où se positionner, c'est déjà la moitié du travail.
+> Se lancer sans s'orienter, c'est prendre le risque de frapper à la mauvaise porte.
+
+---
+
+## Pour qui ?
+
+Pour ceux à qui on a dit « lance-toi dans la tech » sans jamais expliquer comment.
+
+- Tu changes de voie après des années dans un métier qui ne te correspond plus.
+- Tu es en début de carrière, sans horizon clair, et la tech t'attire sans que tu
+  saches par où entrer.
+- Tu n'as personne dans ton entourage qui travaille dans le secteur.
+- Tu as déjà essayé seul… et abandonné.
+
+**BIT a été conçu pour toi. Par des gens comme toi.**
+
+---
+
+## Ce que tu vas faire
+
+- **Comprendre** comment fonctionne vraiment un environnement tech : du terminal
+  Linux au cloud, en passant par les réseaux et les outils du quotidien en équipe.
+- **Manipuler** des outils concrets utilisés en entreprise : Git, scripts, tickets,
+  méthodes agiles.
+- **Identifier** ton métier cible, validé par des professionnels du secteur.
+- **Repartir** avec un projet réel déployé, un CV ajusté et un plan d'action sur
+  3 à 6 mois.
+
+---
+
+## Pourquoi BIT ?
+
+**Le socle avant la spécialisation.**
+Beaucoup se lancent dans un bootcamp trop tôt, sans savoir si le métier leur
+correspond. La déception est fréquente (et coûteuse). BIT est ce qu'on suit
+*avant* d'investir 5 000 €.
+
+**Un vrai accompagnement.**
+2 h de live hebdo, des sessions individuelles à la demande, une disponibilité
+WhatsApp avec réponse sous 24 h. Et si on voit que tu décroches, on va te chercher.
+Tu ne seras jamais livré à toi-même.
+
+**Un formateur qui te ressemble.**
+Ancien sportif de haut niveau, ex-étudiant en droit, aujourd'hui ingénieur DevOps.
+Zéro background tech au départ. Il ne t'explique pas comment faire — il l'a fait.
+
+**Un format qui s'adapte à ta vie.**
+Formation en ligne, sessions le week-end, asynchrone en semaine.
+Compatible avec un emploi, une famille, une vie.
+
+---
+
+## Comparatif
+
+|                                  | Tuto en ligne | **BIT.**                        | Bootcamp classique |
+| -------------------------------- | ------------- | ------------------------------- | ------------------ |
+| **Prix**                         | Gratuit       | **497 €** (2×248 € — lancement) | 5 k – 10 k €       |
+| **Durée**                        | Libre         | **8 semaines**                  | 3 à 6 mois         |
+| **Accompagnement humain**        | Non           | **Individualisé**               | Collectif          |
+| **Orientation avant spécialisation** | Non       | **Oui**                         | Non                |
+
+> BIT ne remplace pas un bootcamp. C'est ce qu'on fait avant pour ne pas se tromper.
+
+---
+
+## Prêt à faire le premier pas ?
+
+- 🌐 [BIT-formation.com](https://BIT-formation.com)
+- 📧 Bitech.formation@gmail.com
+- 📱 [@BIT-formation](https://instagram.com/BIT-formation) — Instagram · LinkedIn · TikTok
+
+---
+
+*Break Into Tech — 2026*
