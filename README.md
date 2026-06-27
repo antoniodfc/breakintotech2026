@@ -96,13 +96,28 @@ Pendant les 6 semaines, tu construis **BitMentor** — un mentor IA sur Telegram
 (une flotte d'agents Python, lancée avec Docker) qui te génère une roadmap puis
 une leçon par jour. C'est ton **projet final**, déployé et reproductible par toi.
 
-- 📂 **Le code du projet** → [`bitmentor/`](bitmentor/) *(doc technique dans son README)*
-- 🧭 **Les guides pas-à-pas pour le mettre en route** *(débutant, sans prérequis)* →
-  [`material/`](material/README.md) — commence par les
-  [prérequis matériel](material/01-prerequis-materiel.md).
+### Le parcours, étape par étape
 
-> Aucune expérience requise : chaque outil (terminal, Git, Docker, Telegram) est
-> expliqué depuis zéro dans [`material/`](material/README.md).
+Chaque étape est un guide illustré, sans prérequis, dans [`material/`](material/README.md) :
+
+1. **Préparer ta machine** — vérifier que ton PC est prêt (RAM, disque, virtualisation).
+   → [Prérequis matériel](material/01-prerequis-materiel.md)
+2. **Monter ton environnement Linux** — installer VirtualBox puis une VM Ubuntu.
+   → [VirtualBox](material/02-virtualisation-virtualbox.md) ·
+   [Ubuntu & ISO](material/03-ubuntu-os-et-iso.md) ·
+   [Installer la VM](material/04-installer-vm-ubuntu.md)
+3. **Récupérer le code** — créer ton compte GitHub et cloner le projet.
+   → [GitHub & clone](material/05-github-compte-et-clone.md)
+4. **Installer Docker** — préparer Ubuntu à faire tourner l'app.
+   → [Docker](material/06-installation-docker.md)
+5. **Configurer & lancer** — créer ton bot Telegram, remplir le `.env`, démarrer BitMentor.
+   → [Telegram + lancement](material/07-installation-telegram.md)
+6. **`/start` sur Telegram** 🎉 — ton mentor IA est en ligne.
+
+> Un mot inconnu ? Tout est expliqué depuis zéro dans le
+> [glossaire](material/08-glossaire.md) (terminal, Git, Docker, VM, Telegram…).
+
+📂 **Le code du projet** → [`bitmentor/`](bitmentor/) *(doc technique dans son README)*
 
 ---
 
