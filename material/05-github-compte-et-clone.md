@@ -19,18 +19,45 @@ sauvegarde en ligne et un historique de toutes les modifications.
 
 ## Étape 1 — Créer un compte GitHub
 
+Un compte GitHub est **gratuit** et se crée dans un **navigateur web** (Firefox est
+déjà installé dans ta VM Ubuntu — tu peux aussi le faire depuis ton téléphone ou un
+autre ordinateur, peu importe).
+
+> 💼 **Important — ton username est public et durable.** Les recruteurs regardent les
+> profils GitHub. Choisis un nom d'utilisateur **professionnel et sobre** : idéalement
+> ton `prénom` + `nom` (ex : `julie-martin`, `martinjulie`). **Évite** les pseudos type
+> `xX_dark_dev_Xx`. Tu le garderas longtemps : autant qu'il fasse sérieux sur un CV.
+
 ![Page d'inscription GitHub](img/github-signup.png)
 
-1. Va sur **https://github.com** et clique sur **Sign up**.
-2. Renseigne :
-   - une **adresse email**
-   - un **mot de passe** solide
-   - un **username** (nom d'utilisateur public, ex : `antoniodfc`)
-3. Valide le petit puzzle de vérification.
-4. Confirme ton email via le lien reçu dans ta boîte mail.
-5. À la question du plan, choisis **Free** (gratuit, amplement suffisant).
+1. Va sur **https://github.com** et clique sur **Sign up** (« S'inscrire »), en haut à
+   droite.
+2. **Adresse email** : saisis une adresse à laquelle tu as accès (tu devras la
+   confirmer), puis **Continue**. Utilise de préférence une adresse **perso et
+   durable** — c'est elle qui sera liée à ton profil et à tes futurs projets.
+3. **Mot de passe** : choisis-en un **solide** (long, mélange de lettres/chiffres).
+   Note-le dans un gestionnaire de mots de passe si tu en as un. **Continue**.
+4. **Username** (nom d'utilisateur) : tape celui choisi plus haut. GitHub indique en
+   direct s'il est **déjà pris** — dans ce cas, ajoute par exemple un chiffre ou un
+   tiret (`julie-martin2`). **Continue**.
+5. **Préférences email** : réponds (ex. `n` si tu ne veux pas les emails marketing),
+   puis valide.
+6. **Vérification anti-robot** : résous le petit **puzzle** (« vérifie que tu es
+   humain »).
+7. Clique sur **Create account**.
+8. **Confirme ton email** : GitHub t'envoie un **code à 8 chiffres** (ou un lien) par
+   mail. Ouvre ta boîte mail, recopie le code sur GitHub. *(Pas reçu ? Regarde dans les
+   **spams**, ou clique sur « renvoyer ».)*
+9. GitHub peut te poser quelques questions d'accueil (« combien de personnes dans ton
+   équipe », « pour quoi vas-tu utiliser GitHub ») : réponds librement, ou **passe**
+   (*Skip*). À la question du **plan**, choisis **Free** (gratuit, amplement suffisant
+   pour tout le parcours).
 
-Ton compte est prêt.
+✅ **Ton compte est prêt.** Tu peux te connecter sur https://github.com.
+
+> 🔒 **Conseil sécurité (recommandé) :** active la **double authentification (2FA)**
+> dans *Settings → Password and authentication*. GitHub la rend de toute façon
+> obligatoire à terme — autant le faire maintenant, c'est un bon réflexe de pro.
 
 ---
 
